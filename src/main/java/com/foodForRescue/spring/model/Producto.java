@@ -60,7 +60,11 @@ public class Producto implements Serializable {
 	@Column (name="denominacion")
 	private String denominacion;
 	
-	// ASOCIACIONES 
+	// ASOCIACIONES
+//	@ManyToMany(mappedBy = "compra")
+//	private List<Compra> compras = new ArrayList<>();
+
+	
 //	@ManyToMany
 //	@JoinTable(name = "productos",
 //	joinColumns = @JoinColumn(name = "product_id", referencedColumnName = "id"),

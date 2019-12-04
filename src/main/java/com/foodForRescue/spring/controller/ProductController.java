@@ -72,9 +72,9 @@ public class ProductController {
 		if (producto.isPresent()) {
 			mav.setViewName("producto-edit");
 			mav.addObject("producto", producto.get());
-			mav.addObject("producto2", producto.get());
+			
 		} else {
-			mav.setViewName("products-list");
+			mav.setViewName("producto-list");
 			mav.addObject("message", "Producto no encontrado");
 		}
 
@@ -87,34 +87,34 @@ public class ProductController {
 	 * @param id the id of the product to retrieve
 	 * @return
 	 */
-	@PostMapping("/products")
-	public String saveProduct(@ModelAttribute("product") Producto product) {
-		log.debug("request to save Product : {}", product);
+	@PostMapping("/productos")
+	public String saveProduct(@ModelAttribute("producto") Producto producto) {
+		log.debug("request to save Product : {}", producto);
 
 		// El producto no existe y tenemos que crearlo
-		if (product.getId() == null) {
-			productoRepository.save(product);
-			return "redirect:/products";
+		if (producto.getId() == null) {
+			productoRepository.save(producto);
+			return "redirect:/productos";
 		}
 
 		// El producto ya existe y tenemos que actualizarlo
-		Optional<Producto> existingProductWrap = productoRepository.findById(product.getId());
-		if (existingProductWrap.isPresent()) {
-			Producto existingProduct = existingProductWrap.get();
-			existingProduct.setReferencia(product.getReferencia());
-			existingProduct.setPrecio(product.getPrecio());
-			existingProduct.setPeso(product.getPeso());
-			existingProduct.setCategoria(product.getCategoria());
-			existingProduct.setFabricante(product.getFabricante());
-			existingProduct.setDescuento(product.getDescuento());
-			existingProduct.setDenominacion(product.getDenominacion());
+		Optional<Producto> existingProductoWrap = productoRepository.findById(producto.getId());
+		if (existingProductoWrap.isPresent()) {
+			Producto existingProducto = existingProductoWrap.get();
+			existingProducto.setReferencia(producto.getReferencia());
+			existingProducto.setPrecio(producto.getPrecio());
+			existingProducto.setPeso(producto.getPeso());
+			existingProducto.setCategoria(producto.getCategoria());
+			existingProducto.setFabricante(producto.getFabricante());
+			existingProducto.setDescuento(producto.getDescuento());
+			existingProducto.setDenominacion(producto.getDenominacion());
 
 			/*approach 2: En caso de no utilizar cascade = {CascadeType.ALL} entre Product y ProductSize será necesario 
 			 * descomentar la siguiente linea para guardar manualmente*/
-//			productSizeRepository.save(existingProduct.getProductSize());
-			productoRepository.save(existingProduct);
+//			productSizeRepository.save(existingProducto.getProductoSize());
+			productoRepository.save(existingProducto);
 		}
-		return "redirect:/products";
+		return "redirect:/productos";
 	}
 
 	/**
@@ -123,11 +123,11 @@ public class ProductController {
 	 * @param id the id of the product to delete
 	 * @return
 	 */
-	@GetMapping("/products/{id}/delete")
-	public String deleteProduct(@PathVariable Long id) {
-		log.debug("request to delete Product : {}", id);
+	@GetMapping("/productos/{id}/delete")
+	public String deleteProducto(@PathVariable Long id) {
+		log.debug("request to delete Producto : {}", id);
 		productoRepository.deleteById(id);
-		return "redirect:/products" ;
+		return "redirect:/productos" ;
 	}
 	
 
