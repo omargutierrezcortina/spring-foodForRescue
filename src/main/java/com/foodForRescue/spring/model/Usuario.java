@@ -40,6 +40,12 @@ public class Usuario implements Serializable {
 	@Column (name="fechaNacimiento")
 	private String fechaNacimiento;
 	
+	@Column (name="email")
+	private String email;
+	
+	@Column (name="password")
+	private String password;
+	
 	// ASOCIACIONES USUARIO
 
 	@OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL)
@@ -54,12 +60,14 @@ public class Usuario implements Serializable {
 		super();
 	}
 
-	public Usuario(Long id, String nombre, String dni, String fechaNacimiento) {
+	public Usuario(Long id, String nombre, String dni, String fechaNacimiento, String email, String password) {
 		super();
 		this.id = id;
 		this.nombre = nombre;
 		this.dni = dni;
 		this.fechaNacimiento = fechaNacimiento;
+		this.email = email;
+		this.password = password;
 	}
 
 	public Long getId() {
@@ -96,6 +104,24 @@ public class Usuario implements Serializable {
 
 	public static long getSerialversionuid() {
 		return serialVersionUID;
+	}
+
+	
+	
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
 	}
 
 	@Override

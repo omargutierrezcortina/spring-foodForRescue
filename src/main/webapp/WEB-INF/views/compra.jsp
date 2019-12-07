@@ -45,7 +45,7 @@ text-decoration:none;
         <a class="nav-link" href="/reciclajes">Reciclaje</a>
       </li>  
       <li class="nav-item">
-        <a class="nav-link" href="/compra">Compra</a>
+        <a class="nav-link" href="/tags">Tags</a>
       </li>  
     </ul>
   </div>
@@ -61,11 +61,7 @@ text-decoration:none;
 <!-- 				</div> -->
 	
 
-		
-		<p>
-			<a class = "btn btn-primary" href="${pageContext.request.contextPath}/productos/empty">Add producto</a>
-			
-		</p>
+	
 	
 		<table class = "table table-striped table-bordered">
 			
@@ -96,7 +92,12 @@ text-decoration:none;
 <%-- 						 </c:forEach> --%>
 <!-- 					</td> -->
 					<td> 
-						<a class="btn btn-info" href = "${pageContext.request.contextPath}/productos/${producto.id}">Añadir al carro</a> 
+					<div class="form-group">
+					<label for="reciclajes">Reciclajes</label> <br>
+						<form:select class = "form-control" path=""
+ 						 items="${reciclajes}" itemLabel="descripcion" itemValue="id"/>
+					</div>
+						<a class="btn btn-info" href = "${pageContext.request.contextPath}/compra/${reciclajes.id}">Finalizar compra</a> 
 <%-- 						<a class="btn btn-danger" href = "${pageContext.request.contextPath}/productos/${producto.id}/delete">Delete</a>  --%>
 					</td>
 				</tr>

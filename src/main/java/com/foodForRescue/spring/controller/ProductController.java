@@ -1,6 +1,10 @@
 package com.foodForRescue.spring.controller;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
+
+import javax.servlet.http.HttpSession;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -13,20 +17,21 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.foodForRescue.spring.model.Producto;
+import com.foodForRescue.spring.model.Usuario;
 import com.foodForRescue.spring.repository.ProductoRepository;
-
+import com.foodForRescue.spring.repository.ReciclajeRepository;
 
 @Controller
 public class ProductController {
 
 	private final Logger log = LoggerFactory.getLogger(ProductController.class);
 
-
 	@Autowired
 	private ProductoRepository productoRepository;
 
+	@Autowired
+	private ReciclajeRepository reciclajeRepository;
 
-	
 	/**
 	 * Punto de entrada a la aplicacion, con poner la URL donde escucha nuestra
 	 * aplicacion entrará aquí y desde aquí redireccionamos al método para obtener
@@ -34,10 +39,6 @@ public class ProductController {
 	 * 
 	 * @return
 	 */
-	@GetMapping("/")
-	public String root() {
-		return "redirect:/productos";
-	}
 
 	@GetMapping("/productos")
 	public ModelAndView getAllProductos() {
@@ -56,7 +57,7 @@ public class ProductController {
 		mav.addObject("producto", new Producto());
 		return mav;
 	}
-	
+
 	/**
 	 * GET /products/:id : get the "id" product.
 	 *
@@ -64,15 +65,25 @@ public class ProductController {
 	 * @return
 	 */
 	@GetMapping("/productos/{id}")
-	public ModelAndView getProducto(@PathVariable Long id) {
+	public ModelAndView getProducto(@PathVariable Long id, HttpSession session) {
 		log.debug("request to get Product : {}", id);
 		Optional<Producto> producto = productoRepository.findById(id);
 
+		List<Producto> cesta = (List<Producto>) session.getAttribute("cesta");
+		if (cesta == null) {
+			cesta = new ArrayList<>();
+		}
 		ModelAndView mav = new ModelAndView();
 		if (producto.isPresent()) {
-			mav.setViewName("producto-edit");
-			mav.addObject("producto", producto.get());
+			//cesta = cesta.get();
 			
+			mav.setViewName("producto-list");
+			//cesta.add((Producto)producto);
+			session.setAttribute("cesta", cesta);
+			mav.addObject("numProductos", cesta.size());
+			mav.addObject("productos", productoRepository.findAll());
+			Usuario usuario = (Usuario) session.getAttribute("user");
+			mav.addObject("reciclajes", reciclajeRepository.findByUsuario(usuario.getId()));
 		} else {
 			mav.setViewName("producto-list");
 			mav.addObject("message", "Producto no encontrado");
@@ -109,8 +120,11 @@ public class ProductController {
 			existingProducto.setDescuento(producto.getDescuento());
 			existingProducto.setDenominacion(producto.getDenominacion());
 
-			/*approach 2: En caso de no utilizar cascade = {CascadeType.ALL} entre Product y ProductSize será necesario 
-			 * descomentar la siguiente linea para guardar manualmente*/
+			/*
+			 * approach 2: En caso de no utilizar cascade = {CascadeType.ALL} entre Product
+			 * y ProductSize será necesario descomentar la siguiente linea para guardar
+			 * manualmente
+			 */
 //			productSizeRepository.save(existingProducto.getProductoSize());
 			productoRepository.save(existingProducto);
 		}
@@ -127,8 +141,28 @@ public class ProductController {
 	public String deleteProducto(@PathVariable Long id) {
 		log.debug("request to delete Producto : {}", id);
 		productoRepository.deleteById(id);
-		return "redirect:/productos" ;
+		return "redirect:/productos";
+	}
+
+	@GetMapping("/compra")
+	public ModelAndView compra(HttpSession session) {
+	
+		List<Producto> cesta = (List<Producto>) session.getAttribute("cesta");
+		if (cesta == null) {
+			cesta = new ArrayList<>();
+		}
+		ModelAndView mav = new ModelAndView();
+		
+			mav.setViewName("compra");
+		
+			session.setAttribute("cesta", cesta);
+			mav.addObject("numProductos", cesta.size());
+			mav.addObject("productos", cesta);
+			Usuario usuario = (Usuario) session.getAttribute("user");
+			mav.addObject("reciclajes", reciclajeRepository.findByUsuario(usuario.getId()));
+
+		   return mav; 
 	}
 	
-
+	
 }

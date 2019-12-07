@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>producto List | Awesome App</title>
+<title>reciclaje List | Awesome App</title>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
 <style type="text/css">
@@ -39,21 +39,21 @@ text-decoration:none;
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="/productos">Productos</a>
+        <a class="nav-link" href="/reciclajes">reciclajes</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/reciclajes">Reciclaje</a>
+        <a class="nav-link" href="/reciclaje">Reciclaje</a>
       </li>  
       <li class="nav-item">
-        <a class="nav-link" href="/compra">Compra</a>
+        <a class="nav-link" href="/tags">Tags</a>
       </li>  
     </ul>
   </div>
 </nav>
 	</header>
 	<div class = "pt-5 container">
-		<p>${numProductos}</p>
-		<h1>Listado de Productos</h1>
+		
+		<h1>Listado de reciclajes</h1>
 		<hr/>
 
 <!-- 				<div class="alert alert-primary" role="alert"> -->
@@ -63,42 +63,35 @@ text-decoration:none;
 
 		
 		<p>
-			<a class = "btn btn-primary" href="${pageContext.request.contextPath}/productos/empty">Add producto</a>
+			<a class = "btn btn-primary" href="${pageContext.request.contextPath}/reciclajes/empty">Add reciclaje</a>
 			
 		</p>
 	
 		<table class = "table table-striped table-bordered">
 			
 			<tr class = "thead-dark">
-				<th>Referencia</th>
+				<th>Tipo</th>
 				<th>Peso</th>
-				<th>Precio</th>
-				<th>Categoría</th>
-				<th>Fabricante</th>
 				<th>Descuento</th>
 				
-				<th>Actions</th>
+				
+				
 			</tr>
 			
-			<c:forEach items="${productos}" var="producto">
+			<c:forEach items="${reciclajes}" var="reciclaje">
 			
 				<tr>
-					<td>${producto.referencia}</td>
-					<td>${producto.peso}</td>
-					<td>${producto.precio}</td>
-					<td>${producto.categoria}</td>
-					<td>${producto.fabricante}</td>
-					<td>${producto.descuento}</td>
-<%-- 					<td><a href="${pageContext.request.contextPath}/manufacturers/${producto.manufacturer.id}"> ${producto.manufacturer.name}</a></td> --%>
+					<td>${reciclaje.tipo}</td>
+					<td>${reciclaje.peso}</td>
+					<td>${reciclaje.descuento}</td>
+					
+<%-- 					<td><a href="${pageContext.request.contextPath}/reciclajes/${reciclaje.reciclaje.id}"> ${reciclaje.reciclaje.name}</a></td> --%>
 <!-- 					<td> -->
-<%-- 						<c:forEach items="${producto.tags}" var="tag"> --%>
+<%-- 						<c:forEach items="${reciclaje.tags}" var="tag"> --%>
 <%-- 						 <span class="badge badge-success"><a href="${pageContext.request.contextPath}/tags/${tag.id}">${tag.name}</a></span> --%>
 <%-- 						 </c:forEach> --%>
 <!-- 					</td> -->
-					<td> 
-						<a class="btn btn-info" href = "${pageContext.request.contextPath}/productos/${producto.id}">Añadir al carro</a> 
-<%-- 						<a class="btn btn-danger" href = "${pageContext.request.contextPath}/productos/${producto.id}/delete">Delete</a>  --%>
-					</td>
+					
 				</tr>
 				
 			</c:forEach>

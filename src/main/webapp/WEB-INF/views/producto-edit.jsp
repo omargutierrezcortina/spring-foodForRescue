@@ -49,6 +49,13 @@
 						<form:input path="descuento" class = "form-control"/>
 					</div>
 					
+					
+					<div class="form-group">
+					<label for="reciclajes">Reciclajes</label> <br>
+						<form:select class = "form-control" path=""
+ 						 items="${reciclajes}" itemLabel="descripcion" itemValue="id"/>
+					</div>
+					
 <!-- 					<div class="form-group"> -->
 <!-- 					<label for="manufacturer">Manufacturer</label> <br> -->
 <%-- 						<form:select class = "form-control" path="manufacturer" --%>

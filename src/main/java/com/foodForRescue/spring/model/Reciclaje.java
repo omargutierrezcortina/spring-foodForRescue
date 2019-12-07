@@ -25,9 +25,35 @@ public class Reciclaje implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	
+	
+	
 	@Column (name="id")
 	private Long id;
 	
+	@Column (name="id_usuario")
+	private Long id_usuario;
+	
+	@Column (name="id_material")
+	private Long id_material;
+	
+	private String descripcion;
+	
+	public Long getId_usuario() {
+		return id_usuario;
+	}
+
+	public void setId_usuario(Long id_usuario) {
+		this.id_usuario = id_usuario;
+	}
+ 
+	public Long getId_material() {
+		return id_material;
+	}
+
+	public void setId_material(Long id_material) {
+		this.id_material = id_material;
+	}
+
 	@Column (name="tipo")
 	private String tipo;
 	
@@ -38,9 +64,13 @@ public class Reciclaje implements Serializable {
 	private int peso;
 	
 	// ASOCIACIONES RECICLAJE
+//		@OneToOne(cascade = { CascadeType.ALL })
+//		@JoinColumn(name = "compra")
+//		private Compra compra;
+		
 		@OneToOne(cascade = { CascadeType.ALL })
-		@JoinColumn(name = "compra")
-		private Compra compra;
+		@JoinColumn(name = "usuario")
+		private Usuario usuario;
 
 	
 	private static final long serialVersionUID = 1L;
@@ -49,12 +79,13 @@ public class Reciclaje implements Serializable {
 		super();
 	}
 
-	public Reciclaje(Long id, String tipo, int descuento, int peso) {
+	public Reciclaje(Long id, String tipo, int descuento, int peso, Long idUsuario) {
 		super();
 		this.id = id;
 		this.tipo = tipo;
 		this.descuento = descuento;
 		this.peso = peso;
+		this.id_usuario = idUsuario;
 	}
 
 	public Long getId() {
@@ -96,6 +127,14 @@ public class Reciclaje implements Serializable {
 	@Override
 	public String toString() {
 		return "Reciclaje [id=" + id + ", tipo=" + tipo + ", descuento=" + descuento + ", peso=" + peso + "]";
+	}
+
+	public String getDescripcion() {
+		return tipo + " - " + peso + " - "+ descuento;
+	}
+
+	public void setDescripcion(String descripcion) {
+		this.descripcion = descripcion;
 	}
 	
 	
