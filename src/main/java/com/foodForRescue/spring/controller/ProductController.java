@@ -16,10 +16,13 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.foodForRescue.spring.model.Compra;
 import com.foodForRescue.spring.model.Producto;
+import com.foodForRescue.spring.model.Reciclaje;
 import com.foodForRescue.spring.model.Usuario;
 import com.foodForRescue.spring.repository.ProductoRepository;
 import com.foodForRescue.spring.repository.ReciclajeRepository;
+import com.foodForRescue.spring.util.UserUtil;
 
 @Controller
 public class ProductController {
@@ -41,11 +44,33 @@ public class ProductController {
 	 */
 
 	@GetMapping("/productos")
-	public ModelAndView getAllProductos() {
+	public ModelAndView getAllProductos(HttpSession session) {
+		if (!UserUtil.usuarioEnSesion(session)) {
+			ModelAndView login = new ModelAndView();
+			login.setViewName("Login");
+			return login;
+		}
 		log.debug("request to get Productos");
 		ModelAndView mav = new ModelAndView();
 		mav.setViewName("producto-list");
 		mav.addObject("productos", productoRepository.findAll());
+		return mav;
+	}
+
+	@GetMapping("/principal")
+	public ModelAndView getPrincipal() {
+		log.debug("request to get Productos");
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("principal");
+		return mav;
+	}
+
+	@GetMapping("/principal/finCompra")
+	public ModelAndView getPrincipalFinCompra() {
+		log.debug("request to get Productos");
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("principal");
+		mav.addObject("mensaje", "Su compra ha finalizado con éxito");
 		return mav;
 	}
 
@@ -75,10 +100,8 @@ public class ProductController {
 		}
 		ModelAndView mav = new ModelAndView();
 		if (producto.isPresent()) {
-			//cesta = cesta.get();
-			
 			mav.setViewName("producto-list");
-			//cesta.add((Producto)producto);
+			anadirProductoACesta(producto.get(), cesta);
 			session.setAttribute("cesta", cesta);
 			mav.addObject("numProductos", cesta.size());
 			mav.addObject("productos", productoRepository.findAll());
@@ -90,6 +113,31 @@ public class ProductController {
 		}
 
 		return mav;
+	}
+
+	/**
+	 * Busca el rpoducto en la cesta y si existe suma una unidad, en caso contrario
+	 * introduce el producto en la cesta
+	 * 
+	 * @param producto
+	 * @param cesta
+	 */
+	private void anadirProductoACesta(Producto producto, List<Producto> cesta) {
+
+		boolean existeEnCEsta = false;
+		for (Producto produCesta : cesta) {
+
+			if (produCesta.getId().equals(producto.getId())) {
+				existeEnCEsta = true;
+				produCesta.setCantidad(produCesta.getCantidad() + 1);
+			}
+		}
+
+		if (!existeEnCEsta) {
+			producto.setCantidad(1);
+			cesta.add(producto);
+		}
+
 	}
 
 	/**
@@ -146,23 +194,71 @@ public class ProductController {
 
 	@GetMapping("/compra")
 	public ModelAndView compra(HttpSession session) {
-	
+
 		List<Producto> cesta = (List<Producto>) session.getAttribute("cesta");
 		if (cesta == null) {
 			cesta = new ArrayList<>();
 		}
 		ModelAndView mav = new ModelAndView();
-		
-			mav.setViewName("compra");
-		
-			session.setAttribute("cesta", cesta);
-			mav.addObject("numProductos", cesta.size());
-			mav.addObject("productos", cesta);
-			Usuario usuario = (Usuario) session.getAttribute("user");
-			mav.addObject("reciclajes", reciclajeRepository.findByUsuario(usuario.getId()));
 
-		   return mav; 
+		mav.setViewName("compra");
+
+		Compra compra = new Compra();
+		compra.setProductos(cesta);
+		mav.addObject("compra", compra);
+		mav.addObject("productos", cesta);
+		Usuario usuario = (Usuario) session.getAttribute("user");
+		mav.addObject("reciclajes", reciclajeRepository.findByUsuario(usuario.getId()));
+
+		return mav;
 	}
-	
-	
+
+	@PostMapping("/aplicarDescuento")
+	public ModelAndView aplicarDescuento(@ModelAttribute("compra") Compra compra, HttpSession session) {
+		Reciclaje reciclaje = compra.getReciclaje();
+
+		List<Producto> cesta = (List<Producto>) session.getAttribute("cesta");
+		if (cesta == null) {
+			cesta = new ArrayList<>();
+		}
+
+		ModelAndView mav = new ModelAndView();
+		if (reciclaje != null) {
+			mav.setViewName("descuento");
+			
+			// Calcular el descuento a la compra
+			calcularPrecioCompra(reciclaje, cesta,compra);
+			mav.addObject("productos", cesta);
+			mav.addObject("compra", compra);
+		} else {
+			mav.setViewName("descuento");
+			
+			// No se aplicaria descuento
+			calcularPrecioCompra(null, cesta, compra);
+			mav.addObject("productos", cesta);
+			mav.addObject("compra", compra);
+		}
+
+		return mav;
+
+	}
+
+	private double calcularPrecioCompra(Reciclaje reciclaje, List<Producto> cesta, Compra compra) {
+		double precio = 0L;
+
+		for (Producto productoEncesta : cesta) {
+			precio += (productoEncesta.getPrecio() * productoEncesta.getCantidad());
+		}
+
+		compra.setPrecio(precio);
+		
+		// Si existe reciclaje aplicamos el descuento
+		if (reciclaje != null) {
+			double descuento = (precio * reciclaje.getDescuento()) / 100L;
+			compra.setPrecioConDescuento(precio - descuento);
+		}
+
+		return precio;
+	}
+
 }

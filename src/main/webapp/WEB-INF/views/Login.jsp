@@ -24,11 +24,11 @@
 					
 					<div class = "form-group">
 					  <label for="email">Email</label>
-					  <form:input path="email" class = "form-control" />
+					  <form:input type ="email" path="email" class = "form-control" />
 					</div>
-					<div class = "form-group">
+					<div class type = "password" = "form-group">
 					  <label for="password">Password</label>
-					  <form:input path="password" class = "form-control" />
+					  <form:input type ="password" path="password" class = "form-control" />
 					</div>
 						
 					<button class = "btn btn-primary" type = "submit" >Acceder</button>

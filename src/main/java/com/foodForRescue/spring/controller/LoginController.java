@@ -80,7 +80,7 @@ public class LoginController {
 			// Falta buscar datos iniciales
 			// UserUtil.cargarDatosIniciales(request);
 			session.setAttribute("user", user);
-			return "redirect:/productos";
+			return "redirect:/principal";
 		} else {
 			
 			return "redirect:/loginError";
@@ -89,21 +89,14 @@ public class LoginController {
 
 	}
 
-	/**
-	 * Método Logout
-	 * 
-	 * @param request
-	 * @param response
-	 * @throws ServletException
-	 * @throws IOException
-	 */
-
-	private void cerrarSesion(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
-
-		request.getSession().removeAttribute("user");
-		// dispatcher = request.getRequestDispatcher("/views/Login.jsp");
-		// dispatcher.forward(request, response);
+	@GetMapping("/logout")
+	public ModelAndView logout(HttpSession session) {
+		session.removeAttribute("user");
+		session.invalidate();
+		log.debug("request to empty login form");
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("Login");
+		mav.addObject("usuario", new Usuario());
+		return mav;
 	}
-
 }

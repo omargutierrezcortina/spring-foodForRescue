@@ -58,7 +58,7 @@ public class Reciclaje implements Serializable {
 	private String tipo;
 	
 	@Column (name="descuento")
-	private int descuento;
+	private Long descuento;
 	
 	@Column (name="peso")
 	private int peso;
@@ -79,7 +79,7 @@ public class Reciclaje implements Serializable {
 		super();
 	}
 
-	public Reciclaje(Long id, String tipo, int descuento, int peso, Long idUsuario) {
+	public Reciclaje(Long id, String tipo, Long descuento, int peso, Long idUsuario) {
 		super();
 		this.id = id;
 		this.tipo = tipo;
@@ -104,11 +104,11 @@ public class Reciclaje implements Serializable {
 		this.tipo = tipo;
 	}
 
-	public int getDescuento() {
+	public Long getDescuento() {
 		return descuento;
 	}
 
-	public void setDescuento(int descuento) {
+	public void setDescuento(Long descuento) {
 		this.descuento = descuento;
 	}
 

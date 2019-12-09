@@ -1,5 +1,8 @@
 package com.foodForRescue.spring.controller;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.servlet.http.HttpSession;
 
 import org.slf4j.Logger;
@@ -7,9 +10,14 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.foodForRescue.spring.model.Compra;
+import com.foodForRescue.spring.model.Producto;
 import com.foodForRescue.spring.model.Reciclaje;
+import com.foodForRescue.spring.model.TipoReciclaje;
 import com.foodForRescue.spring.model.Usuario;
 import com.foodForRescue.spring.repository.ReciclajeRepository;
 
@@ -19,13 +27,7 @@ public class ReciclajeController {
 	private final Logger log = LoggerFactory.getLogger(ProductController.class);
 	
 	@Autowired
-	private ReciclajeRepository reciclajeRepository;
-	
-	
-	
-	
-	
-	
+	private ReciclajeRepository reciclajeRepository;	
 	
 	public String root() {
 		return "redirect:/reciclajes";
@@ -45,8 +47,22 @@ public class ReciclajeController {
 	public ModelAndView createreciclaje() {
 		log.debug("request to empty reciclaje form");
 		ModelAndView mav = new ModelAndView();
-		mav.setViewName("reciclaje-edit");
+		mav.setViewName("reciclaje-edit");		
+        mav.addObject("tipos", TipoReciclaje.values());
 		mav.addObject("reciclaje", new Reciclaje());
 		return mav;
 	}
+	
+	
+	@PostMapping("/crearReciclaje")
+	public String crearReciclaje(@ModelAttribute("reciclaje") Reciclaje reciclaje, HttpSession session) {	
+	
+		Usuario usuario = (Usuario) session.getAttribute("user");
+		reciclaje.setId_usuario(usuario.getId());
+		reciclaje.setDescuento(Long.valueOf(reciclaje.getPeso()));
+		reciclajeRepository.save(reciclaje);
+		
+		return "redirect:/reciclajes";
+	}
+	
 }

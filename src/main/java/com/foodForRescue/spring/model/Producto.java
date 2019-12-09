@@ -59,6 +59,9 @@ public class Producto implements Serializable {
 	
 	@Column (name="denominacion")
 	private String denominacion;
+
+	private int cantidad;
+	
 	
 	// ASOCIACIONES
 //	@ManyToMany(mappedBy = "compra")
@@ -155,6 +158,15 @@ public class Producto implements Serializable {
 
 	public static long getSerialversionuid() {
 		return serialVersionUID;
+	}
+	
+
+	public int getCantidad() {
+		return cantidad;
+	}
+
+	public void setCantidad(int cantidad) {
+		this.cantidad = cantidad;
 	}
 
 	@Override

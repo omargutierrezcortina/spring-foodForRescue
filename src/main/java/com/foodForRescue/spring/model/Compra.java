@@ -56,6 +56,7 @@ public class Compra implements Serializable {
 	@JoinColumn(name = "reciclaje")
 	private Reciclaje reciclaje;
 
+	private double precioConDescuento;
 	
 	private static final long serialVersionUID = 1L;
 
@@ -119,6 +120,14 @@ public class Compra implements Serializable {
 	public String toString() {
 		return "Compra [id=" + id + ", precio=" + precio + ", producto=" + producto + ", usuario=" + usuario
 				+ ", productos=" + productos + ", reciclaje=" + reciclaje + "]";
+	}
+
+	public double getPrecioConDescuento() {
+		return precioConDescuento;
+	}
+
+	public void setPrecioConDescuento(double precioConDescuento) {
+		this.precioConDescuento = precioConDescuento;
 	}
 
 	

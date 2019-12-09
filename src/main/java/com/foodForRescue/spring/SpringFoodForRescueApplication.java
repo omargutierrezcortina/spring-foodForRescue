@@ -38,8 +38,8 @@ public class SpringFoodForRescueApplication implements CommandLineRunner {
 	public void run(String... args) throws Exception {
 		productoRepository.save(new Producto("cf456d", 500, 2, "panaderia", "ibias", 0, "oriente"));
 		
-		reciclajeRepository.save(new Reciclaje (1L, "vidrio", 200, 2, 1L));
-		reciclajeRepository.save(new Reciclaje (2L, "papel", 100, 4, 1L));
+		reciclajeRepository.save(new Reciclaje (1L, "vidrio", 2L, 2, 1L));
+		reciclajeRepository.save(new Reciclaje (2L, "papel", 4L, 4, 1L));
 
 		usuarioRepository.save(new Usuario(1L, "pepe", "726292","11-11-2000", "pepe@prueba.com", "1234"));
 		
