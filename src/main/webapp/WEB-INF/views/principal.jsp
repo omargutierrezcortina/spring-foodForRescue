@@ -5,17 +5,19 @@
 
 <!DOCTYPE html>
 <html>
+
+
+
 <head>
-
-
-
-
 
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>producto List | Awesome App</title>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
 <style type="text/css">
+
+
+
 
 </style>
 <%-- 	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/styles.css"> --%>
@@ -47,7 +49,7 @@
             <div class="mx-auto text-center">
                 <h1 class="mx-auto my-0 text-uppercase">FOOD FOR RESCUE</h1>
                 <h2 class="text-white-50 mx-auto mt-2 mb-5">Una nueva perspectiva medioambiental al alcance de un click</h2>
-                <a href="#about" class="btn btn-primary js-scroll-trigger">COMIENZA TU COMPRA</a>
+                <a href="/bebidas" class="btn btn-primary js-scroll-trigger">COMIENZA TU COMPRA</a>
             </div>
         </div>
     </header>
