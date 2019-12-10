@@ -58,7 +58,12 @@ public class ProductController {
 	}
 
 	@GetMapping("/principal")
-	public ModelAndView getPrincipal() {
+	public ModelAndView getPrincipal(HttpSession session) {
+		if (!UserUtil.usuarioEnSesion(session)) {
+			ModelAndView login = new ModelAndView();
+			login.setViewName("Login");
+			return login;
+		}
 		log.debug("request to get Productos");
 		ModelAndView mav = new ModelAndView();
 		mav.setViewName("principal");
@@ -66,7 +71,12 @@ public class ProductController {
 	}
 
 	@GetMapping("/principal/finCompra")
-	public ModelAndView getPrincipalFinCompra() {
+	public ModelAndView getPrincipalFinCompra(HttpSession session) {
+		if (!UserUtil.usuarioEnSesion(session)) {
+			ModelAndView login = new ModelAndView();
+			login.setViewName("Login");
+			return login;
+		}
 		log.debug("request to get Productos");
 		ModelAndView mav = new ModelAndView();
 		mav.setViewName("principal");
@@ -91,6 +101,11 @@ public class ProductController {
 	 */
 	@GetMapping("/productos/{id}")
 	public ModelAndView getProducto(@PathVariable Long id, HttpSession session) {
+		if (!UserUtil.usuarioEnSesion(session)) {
+			ModelAndView login = new ModelAndView();
+			login.setViewName("Login");
+			return login;
+		}
 		log.debug("request to get Product : {}", id);
 		Optional<Producto> producto = productoRepository.findById(id);
 
@@ -147,7 +162,10 @@ public class ProductController {
 	 * @return
 	 */
 	@PostMapping("/productos")
-	public String saveProduct(@ModelAttribute("producto") Producto producto) {
+	public String saveProduct(@ModelAttribute("producto") Producto producto,HttpSession session) {
+		if (!UserUtil.usuarioEnSesion(session)) {
+			return "redirect:/login";
+		}
 		log.debug("request to save Product : {}", producto);
 
 		// El producto no existe y tenemos que crearlo
@@ -259,6 +277,17 @@ public class ProductController {
 		}
 
 		return precio;
+	}
+	
+	
+	private int calcularNumeroProductos(List<Producto> cesta, Compra compra) {
+		int numero = 0;
+
+		for (Producto productoEncesta : cesta) {
+			numero = numero +  productoEncesta.getCantidad();
+		}
+
+		return numero;
 	}
 
 }

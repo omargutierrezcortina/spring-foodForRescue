@@ -20,6 +20,7 @@ import org.springframework.web.servlet.ModelAndView;
 import com.foodForRescue.spring.model.Producto;
 import com.foodForRescue.spring.model.Usuario;
 import com.foodForRescue.spring.repository.UsuarioRepository;
+import com.foodForRescue.spring.util.SecurityUtil;
 
 @Controller
 public class LoginController {
@@ -72,7 +73,13 @@ public class LoginController {
 
 		// Buscamos con los datos del formulario
 		if (usuario.getEmail() != null || usuario.getPassword() != null && user == null) {
-			user = usuarioRepository.findByEmailAndPassword(usuario.getEmail(), usuario.getPassword());
+			String email = SecurityUtil.sanitizar(usuario.getEmail());
+			String password = SecurityUtil.sanitizar(usuario.getPassword());
+			
+			if(SecurityUtil.validateSql(email) || SecurityUtil.validateSql(password)) {
+				return "redirect:/loginError";
+			}
+			user = usuarioRepository.findByEmailAndPassword(email, password);
 		}
 		// Estamos logados
 		if (user != null) {
