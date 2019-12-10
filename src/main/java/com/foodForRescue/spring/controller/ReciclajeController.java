@@ -59,7 +59,6 @@ public class ReciclajeController {
 	
 		Usuario usuario = (Usuario) session.getAttribute("user");
 		reciclaje.setId_usuario(usuario.getId());
-		reciclaje.
 		reciclaje.setDescuento(Long.valueOf(reciclaje.getPeso()));
 		reciclajeRepository.save(reciclaje);
 		

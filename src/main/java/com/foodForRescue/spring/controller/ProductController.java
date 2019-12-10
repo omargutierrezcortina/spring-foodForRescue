@@ -289,5 +289,18 @@ public class ProductController {
 
 		return numero;
 	}
+	
+	@GetMapping("/bebidas")
+	public ModelAndView getAllBebidas(HttpSession session) {
+		if (!UserUtil.usuarioEnSesion(session)) {
+			ModelAndView login = new ModelAndView();
+			login.setViewName("Login");
+			return login;
+		}
+		log.debug("request to get Bebidas");
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("bebidas");
+		return mav;
+	}
 
 }

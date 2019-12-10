@@ -73,13 +73,7 @@ public class LoginController {
 
 		// Buscamos con los datos del formulario
 		if (usuario.getEmail() != null || usuario.getPassword() != null && user == null) {
-			String email = SecurityUtil.sanitizar(usuario.getEmail());
-			String password = SecurityUtil.sanitizar(usuario.getPassword());
-			
-			if(SecurityUtil.validateSql(email) || SecurityUtil.validateSql(password)) {
-				return "redirect:/loginError";
-			}
-			user = usuarioRepository.findByEmailAndPassword(email, password);
+			user = usuarioRepository.findByEmailAndPassword(usuario.getEmail(), usuario.getPassword());
 		}
 		// Estamos logados
 		if (user != null) {
@@ -93,6 +87,7 @@ public class LoginController {
 			return "redirect:/loginError";
 
 		}
+
 
 	}
 
