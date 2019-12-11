@@ -22,12 +22,6 @@
 		<p>${numProductos}</p>
 		<h1>Listado de Productos</h1>
 		<hr/>
-
-<!-- 				<div class="alert alert-primary" role="alert"> -->
-<%-- 				 ${message} --%>
-<!-- 				</div> -->
-	
-
 		
 		<p>
 			<a class = "btn btn-primary" href="${pageContext.request.contextPath}/productos/empty">Add producto</a>
@@ -56,15 +50,10 @@
 					<td>${producto.categoria}</td>
 					<td>${producto.fabricante}</td>
 					<td>${producto.descuento}</td>
-<%-- 					<td><a href="${pageContext.request.contextPath}/manufacturers/${producto.manufacturer.id}"> ${producto.manufacturer.name}</a></td> --%>
-<!-- 					<td> -->
-<%-- 						<c:forEach items="${producto.tags}" var="tag"> --%>
-<%-- 						 <span class="badge badge-success"><a href="${pageContext.request.contextPath}/tags/${tag.id}">${tag.name}</a></span> --%>
-<%-- 						 </c:forEach> --%>
-<!-- 					</td> -->
+
 					<td> 
 						<a class="btn btn-info" href = "${pageContext.request.contextPath}/productos/${producto.id}">Añadir al carro</a> 
-<%-- 						<a class="btn btn-danger" href = "${pageContext.request.contextPath}/productos/${producto.id}/delete">Delete</a>  --%>
+
 					</td>
 				</tr>
 				
