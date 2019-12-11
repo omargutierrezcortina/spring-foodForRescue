@@ -93,7 +93,7 @@
 				  <div class="col-md-6 col-lg-3 ftco-animate">
 					  <div class="product">
 						  <a href="#" class="img-prod"><img alt="Cambiar imagen" height="210" onmouseout="this.src='img/conservas/fabada.jpg';
-							  " onmouseover="this.src='img/conservas/fabada2.jpg';" src="imm/conservas/fabada.jpg" />
+							  " onmouseover="this.src='img/conservas/fabada2.jpg';" src="img/conservas/fabada.jpg" />
 							  
 						  </a>
 						  <div class="text py-3 pb-4 px-3 text-center">

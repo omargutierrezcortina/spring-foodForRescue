@@ -302,5 +302,98 @@ public class ProductController {
 		mav.setViewName("bebidas");
 		return mav;
 	}
+	
+	@GetMapping("/conservas")
+	public ModelAndView getAllConservas(HttpSession session) {
+		if (!UserUtil.usuarioEnSesion(session)) {
+			ModelAndView login = new ModelAndView();
+			login.setViewName("Login");
+			return login;
+		}
+		log.debug("request to get Conservas");
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("conservas");
+		return mav;
+	}
+	@GetMapping("/embutidos")
+	public ModelAndView getAllEmbutidos(HttpSession session) {
+		if (!UserUtil.usuarioEnSesion(session)) {
+			ModelAndView login = new ModelAndView();
+			login.setViewName("Login");
+			return login;
+		}
+		log.debug("request to get Embutidos");
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("embutidos");
+		return mav;
+	}
+	@GetMapping("/frutos-secos")
+	public ModelAndView getAllFrutosSecos(HttpSession session) {
+		if (!UserUtil.usuarioEnSesion(session)) {
+			ModelAndView login = new ModelAndView();
+			login.setViewName("Login");
+			return login;
+		}
+		log.debug("request to get Frutos Secos");
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("frutosSecos");
+		return mav;
+	} 
+	@GetMapping("/panaderia")
+	public ModelAndView getAllPanaderia(HttpSession session) {
+		if (!UserUtil.usuarioEnSesion(session)) {
+			ModelAndView login = new ModelAndView();
+			login.setViewName("Login");
+			return login;
+		}
+		log.debug("request to get Panaderia");
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("panaderia");
+		return mav;
+		
+	}
+	@GetMapping("/legumbres")
+	public ModelAndView getAllLegumbres(HttpSession session) {
+		if (!UserUtil.usuarioEnSesion(session)) {
+			ModelAndView login = new ModelAndView();
+			login.setViewName("Login");
+			return login;
+		}
+		log.debug("request to get Legumbres");
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("legumbres");
+		return mav;
+		
+	}
+	@GetMapping("/quesos")
+	public ModelAndView getAllQuesos(HttpSession session) {
+		if (!UserUtil.usuarioEnSesion(session)) {
+			ModelAndView login = new ModelAndView();
+			login.setViewName("Login");
+			return login;
+		}
+		log.debug("request to get Quesos");
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("quesos");
+		return mav;
+		
+	}
+	@GetMapping("/postres")
+	public ModelAndView getAllPostres(HttpSession session) {
+		if (!UserUtil.usuarioEnSesion(session)) {
+			ModelAndView login = new ModelAndView();
+			login.setViewName("Login");
+			return login;
+		}
+		log.debug("request to get Postres");
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("postres");
+		return mav;
+	
+	}
+
+
 
 }
+
+

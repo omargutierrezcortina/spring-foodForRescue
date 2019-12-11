@@ -1,56 +1,57 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ include file = "/WEB-INF/views/navbar.jsp" %>
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <title>FOOD FOR RESCUE </title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/styles.css">
+        
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/open-iconic-bootstrap.min.css">
+    
     <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
-    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/static/css/animate.css">
     
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/static/css/owl.carousel.min.css'"/>
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/static/css/owl.theme.default.min.css'"/>
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/static/css/magnific-popup.css">
 
-    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/static/css/aos.css">
 
-    <link rel="stylesheet" href="css/ionicons.min.css">
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/static/css/ionicons.min.css">
 
-    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
-    <link rel="stylesheet" href="css/jquery.timepicker.css">
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/static/css/bootstrap-datepicker.css">
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/static/css/jquery.timepicker.css">
 
-    
-    <link rel="stylesheet" href="css/flaticon.css">
-    <link rel="stylesheet" href="css/icomoon.css">
-	<link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/static/css/flaticon.css">
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/static/css/icomoon.css">
+	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/static/css/style.css">
 	
+<!-- Bootstrap core CSS -->
+	<link type="text/css" href="${pageContext.request.contextPath}/static/css/bootstrap.min.css" rel="stylesheet">
 
-
-
-
-
-	<!-- Bootstrap core CSS -->
-	<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-	<!-- Custom fonts for this template -->
-	<link href="../frontal_principal/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+<!-- Custom fonts for this template -->
+	<link href="../img/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
-	<!-- Custom styles for this template -->
-	<link href="css/grayscale.min.css" rel="stylesheet">
+<!-- Custom styles for this template -->
+	<link type="text/css" href="${pageContext.request.contextPath}/css/grayscale.min.css" rel="stylesheet">
 
-
-	<!-- login -->
+<!-- login -->
 	<!-- Mobile Specific Metas -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	
 	<!-- Main Style Css -->
-	<link rel="stylesheet" href="css/csslogin.css"/>
+	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/csslogin.css"/>
 	
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -60,132 +61,10 @@
   </head>
   <body class="goto-here page-top">
 	  <!----------------------------------------------------BARRA------------------------------------------------------------------>
-
-		<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-				<div class="container">
-				   <a href="embutidos.html"> <img class = "logo" src="../frontal_principal/img/logo.final.png" href alt=""></a>
-		
-			   
-					<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-				Menu
-				<i class="fas fa-bars"></i>
-			  </button>
-					<div class="collapse navbar-collapse" id="navbarResponsive">
-						<ul class="navbar-nav ml-auto">
-								<li class="nav-item dropdown">
-										<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" 
-										role="button" aria-haspopup="true" aria-expanded="false">Productos</a>
-										<div class="dropdown-menu">
-										  <a class="dropdown-item" href="../productosasturianos/panaderia.html">Panadería</a>
-										  <a class="dropdown-item" href="../productosasturianos/legumbres.html">Legumbres</a>
-										  <a class="dropdown-item" href="../productosasturianos/frutosSecos.html">Frutos Secos</a>
-										  <a class="dropdown-item" href="../productosasturianos/embutidos.html">Embutidos</a>
-										  <a class="dropdown-item" href="../productosasturianos/conservas.html">Conservas</a>
-										  <a class="dropdown-item" href="../productosasturianos/quesos.html">Quesos</a>
-										  <a class="dropdown-item" href="../productosasturianos/postres.html">Postres </a>
-										  <a class="dropdown-item" href="../productosasturianos/bebidas.html">Bebidas</a>
-										</div>
-									  </li>
-							<li class="nav-item">
-								<a class="nav-link js-scroll-trigger" href="reciclaje.html">Reciclaje</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link js-scroll-trigger" href="#signup">Contacto</a>
-							</li>
-
-							<button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-white">Login</button>
-
-							<div id="id01" class="w3-modal">
-							  <div class="page-content">
-								  <div class="form-v8-content">
-								  <div class="form-right">
-										  <span onclick="document.getElementById('id01').style.display='none'" 
-										  class="w3-button w3-display-topright">&times;</span>
-									  <div class="tab">
-										  <div class="tab-inner">
-											  <button class="tablinks" onclick="openCity(event, 'sign-up')" id="defaultOpen">Entrar</button>
-										  </div>
-										  <div class="tab-inner">
-											  <button class="tablinks" onclick="openCity(event, 'sign-in')">Registrarse</button>
-										  </div>
-									  </div>
-									  <form class="form-detail" action="#" method="post">
-										  <div class="tabcontent" id="sign-up">
-											  
-											  <div class="form-row">
-												  <label class="form-row-inner">
-													  <input type="text" name="email" id="email" class="input-text" required>
-													  <span class="label">E-Mail</span>
-														<span class="border"></span>
-												  </label>
-											  </div>
-											  <div class="form-row">
-												  <label class="form-row-inner">
-													  <input type="password" name="password" id="password" class="input-text" required>
-													  <span class="label">Contraseña</span>
-													  <span class="border"></span>
-												  </label>
-											  </div>
-											  
-											  <div class="form-row-last">
-												  <input type="submit" name="register" class="register" value="Entrar">
-											  </div>
-										  </div>
-										  <!-- -------------------- -->
-									  </form>
-									  <form class="form-detail" action="#" method="post">
-										  <div class="tabcontent" id="sign-in">
-											  <div class="form-row">
-												  <label class="form-row-inner">
-													  <input type="text" name="firstname" id="firstname" class="input-text" required>
-													  <span class="label">Nombre</span>
-														<span class="border"></span>
-												  </label>
-											  </div>
-											  <div class="form-row">
-													  <label class="form-row-inner">
-														  <input type="text" name="lastname" id="lastname" class="input-text" required>
-														  <span class="label">Apellidos</span>
-															<span class="border"></span>
-													  </label>
-												  </div>
-											  <div class="form-row">
-												  <label class="form-row-inner">
-													  <input type="text" name="email" id="email" class="input-text" required>
-													  <span class="label">E-Mail</span>
-														<span class="border"></span>
-												  </label>
-											  </div>
-											  <div class="form-row">
-												  <label class="form-row-inner">
-													  <input type="password" name="password" id="password" class="input-text" required>
-													  <span class="label">Contraseña</span>
-													  <span class="border"></span>
-												  </label>
-											  </div>
-										  
-											  <div class="form-row-last">
-												  <input type="submit" name="register" class="register" value="Registrarse">
-											  </div>
-										  </div>
-									  </form>
-								  </div>
-							  </div>
-						  
-						  
-								</div>
-								
-							  </div>
-							
-							<li class="nav-item cta cta-colored"><a href="cart.html" class="nav-link"><span class="icon-shopping_cart"></span>[0]</a></li>
-						</ul>
-					</div>
-				</div>
-			</nav>
 		
 
 	  <!----------------------------------------------------CARROUSEL------------------------------------------------------------------>
-    <div class="hero-wrap hero-bread" style="background-image: url('images/Embutidos/embutidos-asturianos.jpg');">
+    <div class="hero-wrap hero-bread" style="background-image: url('img/Embutidos/embutidos-asturianos.jpg');">
 		<div class="container">
 		  <div class="row no-gutters slider-text align-items-center justify-content-center">
 			<div class="col-md-9 ftco-animate text-center">
@@ -212,10 +91,9 @@
 			  <div class="row">
 				  <div class="col-md-6 col-lg-3 ftco-animate">
 					  <div class="product">
-						  <a href="#" class="img-prod"><img alt="Cambiar imagen" height="205" onmouseout="this.src='images/Embutidos/chorizo.jpg';
-						  " onmouseover="this.src='images/Embutidos/chorizo2.jpg';" src="images/Embutidos/chorizo.jpg" />
-							  
-							  
+						  <a href="#" class="img-prod"><img alt="Cambiar imagen" height="205" onmouseout="this.src='img/Embutidos/chorizo.jpg';
+						  " onmouseover="this.src='img/Embutidos/chorizo2.jpg';" src="img/Embutidos/chorizo.jpg" />
+						
 						  </a>
 						  <div class="text py-3 pb-4 px-3 text-center">
 							  <h3><a href="#">Chorizo</a></h3>
@@ -242,8 +120,8 @@
 				  </div>
 				  <div class="col-md-6 col-lg-3 ftco-animate">
 					  <div class="product">
-						  <a href="#" class="img-prod"><img alt="Cambiar imagen" height="205" onmouseout="this.src='images/Embutidos/chosco.jpg';
-							  " onmouseover="this.src='images/Embutidos/Chosco2.jpg';" src="images/Embutidos/chosco.jpg" />
+						  <a href="#" class="img-prod"><img alt="Cambiar imagen" height="205" onmouseout="this.src='img/Embutidos/chosco.jpg';
+							  " onmouseover="this.src='img/Embutidos/Chosco2.jpg';" src="img/Embutidos/chosco.jpg" />
 							  
 						  </a>
 						  <div class="text py-3 pb-4 px-3 text-center">
@@ -271,8 +149,8 @@
 				  </div>
 				  <div class="col-md-6 col-lg-3 ftco-animate">
 					  <div class="product">
-						  <a href="#" class="img-prod"><img alt="Cambiar imagen" height="205" onmouseout="this.src='images/Embutidos/morcilla.jpg';
-							  " onmouseover="this.src='images/Embutidos/morcilla2.jpg';" src="images/Embutidos/morcilla.jpg" />
+						  <a href="#" class="img-prod"><img alt="Cambiar imagen" height="205" onmouseout="this.src='img/Embutidos/morcilla.jpg';
+							  " onmouseover="this.src='img/Embutidos/morcilla2.jpg';" src="img/Embutidos/morcilla.jpg" />
 							  
 						  </a>
 						  <div class="text py-3 pb-4 px-3 text-center">
@@ -301,8 +179,8 @@
   
 				  <div class="col-md-6 col-lg-3 ftco-animate">
 					  <div class="product">
-						  <a href="#" class="img-prod"><img alt="Cambiar imagen" height="205" onmouseout="this.src='images/Embutidos/chorizo_jabali.jpg';
-							  " onmouseover="this.src='images/Embutidos/chorizo_jabali2.jpg';" src="images/Embutidos/chorizo_jabali.jpg" />
+						  <a href="#" class="img-prod"><img alt="Cambiar imagen" height="205" onmouseout="this.src='img/Embutidos/chorizo_jabali.jpg';
+							  " onmouseover="this.src='img/Embutidos/chorizo_jabali2.jpg';" src="img/Embutidos/chorizo_jabali.jpg" />
 						  </a>
 						  <div class="text py-3 pb-4 px-3 text-center">
 							  <h3><a href="#">Chorizo de jabali</a></h3>
@@ -329,8 +207,8 @@
 			  </div>
 			  <div class="col-md-6 col-lg-3 ftco-animate">
 				  <div class="product">
-					  <a href="#" class="img-prod"><img alt="Cambiar imagen" height="205" onmouseout="this.src='images/Embutidos/lacon.jpg';
-						  " onmouseover="this.src='images/Embutidos/lacon2.jpg';" src="images/Embutidos/lacon.jpg" />
+					  <a href="#" class="img-prod"><img alt="Cambiar imagen" height="205" onmouseout="this.src='img/Embutidos/lacon.jpg';
+						  " onmouseover="this.src='img/Embutidos/lacon2.jpg';" src="img/Embutidos/lacon.jpg" />
 					  </a>
 					  <div class="text py-3 pb-4 px-3 text-center">
 						  <h3><a href="#">Lacon</a></h3>
@@ -357,8 +235,8 @@
 			  </div>
 			  <div class="col-md-6 col-lg-3 ftco-animate">
 				  <div class="product">
-					  <a href="#" class="img-prod"><img alt="Cambiar imagen" height="205" onmouseout="this.src='images/Embutidos/cecina.jpg';
-						  " onmouseover="this.src='images/Embutidos/cecina2.jpg';" src="images/Embutidos/cecina.jpg" />
+					  <a href="#" class="img-prod"><img alt="Cambiar imagen" height="205" onmouseout="this.src='img/Embutidos/cecina.jpg';
+						  " onmouseover="this.src='img/Embutidos/cecina2.jpg';" src="img/Embutidos/cecina.jpg" />
 					  </a>
 					  <div class="text py-3 pb-4 px-3 text-center">
 						  <h3><a href="#">Cecina</a></h3>
@@ -386,8 +264,8 @@
   
 			  <div class="col-md-6 col-lg-3 ftco-animate">
 				  <div class="product">
-					  <a href="#" class="img-prod"><img alt="Cambiar imagen" height="205" onmouseout="this.src='images/Embutidos/longaniza.jpg';
-						  " onmouseover="this.src='images/Embutidos/longaniza2.jpg';" src="images/Embutidos/longaniza.jpg" />
+					  <a href="#" class="img-prod"><img alt="Cambiar imagen" height="205" onmouseout="this.src='img/Embutidos/longaniza.jpg';
+						  " onmouseover="this.src='img/Embutidos/longaniza2.jpg';" src="img/Embutidos/longaniza.jpg" />
 					  </a>
 					  <div class="text py-3 pb-4 px-3 text-center">
 						  <h3><a href="#">Longaniza</a></h3>
@@ -415,8 +293,8 @@
   
 		  <div class="col-md-6 col-lg-3 ftco-animate">
 			  <div class="product">
-				  <a href="#" class="img-prod"><img alt="Cambiar imagen" height="205" onmouseout="this.src='images/Embutidos/picadillo.jpg';
-					  " onmouseover="this.src='images/Embutidos/picadillo2.jpg';" src="images/Embutidos/picadillo.jpg" />
+				  <a href="#" class="img-prod"><img alt="Cambiar imagen" height="205" onmouseout="this.src='img/Embutidos/picadillo.jpg';
+					  " onmouseover="this.src='img/Embutidos/picadillo2.jpg';" src="img/Embutidos/picadillo.jpg" />
 				  </a>
 				  <div class="text py-3 pb-4 px-3 text-center">
 					  <h3><a href="#">Picadillo</a></h3>
@@ -468,7 +346,7 @@
 						<div class="card py-4 h-100">
 							<div class="card-body text-center">
 								<i class="fas fa-map-marked-alt text-primary mb-2"></i>
-								<h4 class="text-uppercase m-0">Dirección</h4>
+								<h4 class="text-uppercase m-0">Direccion</h4>
 								<hr class="my-4">
 								<div class="small text-black-50">Calle Avenida de Oviedo, nº55, bajo 6</div>
 							</div>
@@ -492,7 +370,7 @@
 						<div class="card py-4 h-100">
 							<div class="card-body text-center">
 								<i class="fas fa-mobile-alt text-primary mb-2"></i>
-								<h4 class="text-uppercase m-0">Teléfono</h4>
+								<h4 class="text-uppercase m-0">Telefono</h4>
 								<hr class="my-4">
 								<div class="small text-black-50">985678598</div>
 							</div>
@@ -554,10 +432,6 @@
 			// Get the element with id="defaultOpen" and click on it
 			document.getElementById("defaultOpen").click();
 		</script>
-
-  <!-- loader -->
-  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
-
 
   <script src="js/jquery.min.js"></script>
   <script src="js/jquery-migrate-3.0.1.min.js"></script>
