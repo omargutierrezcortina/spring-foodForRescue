@@ -10,49 +10,48 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
-        <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/styles.css">
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/styles.css">
         
-    <link rel="stylesheet" href="main/resources/static/css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/open-iconic-bootstrap.min.css">
     
     <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/static/css/animate.css">
     
-    <link rel="stylesheet" href="value='static/css/owl.carousel.min.css'"/>
-    <link rel="stylesheet" href="value='static/css/owl.theme.default.min.css'"/>
-    <link rel="stylesheet" href="static/css/magnific-popup.css">
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/static/css/owl.carousel.min.css'"/>
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/static/css/owl.theme.default.min.css'"/>
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/static/css/magnific-popup.css">
 
-    <link rel="stylesheet" href="static/css/aos.css">
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/static/css/aos.css">
 
-    <link rel="stylesheet" href="static/css/ionicons.min.css">
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/static/css/ionicons.min.css">
 
-    <link rel="stylesheet" href="static/css/bootstrap-datepicker.css">
-    <link rel="stylesheet" href="static/css/jquery.timepicker.css">
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/static/css/bootstrap-datepicker.css">
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/static/css/jquery.timepicker.css">
 
-    
-    <link rel="stylesheet" href="static/css/flaticon.css">
-    <link rel="stylesheet" href="static/css/icomoon.css">
-	<link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/static/css/flaticon.css">
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/static/css/icomoon.css">
+	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/static/css/style.css">
 	
 <!-- Bootstrap core CSS -->
-	<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link type="text/css" href="${pageContext.request.contextPath}/static/css/bootstrap.min.css" rel="stylesheet">
 
 <!-- Custom fonts for this template -->
-	<link href="../frontal_principal/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+	<link href="../img/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
 <!-- Custom styles for this template -->
-	<link href="static/css/grayscale.min.css" rel="stylesheet">
+	<link type="text/css" href="${pageContext.request.contextPath}/css/grayscale.min.css" rel="stylesheet">
 
 <!-- login -->
 	<!-- Mobile Specific Metas -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	
 	<!-- Main Style Css -->
-	<link rel="stylesheet" href="static/css/csslogin.css"/>
+	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/csslogin.css"/>
 	
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -66,11 +65,11 @@
 
 
       <!----------------------------------------------------CARROUSEL------------------------------------------------------------------>
-	<div class="hero-wrap hero-bread" style="background-image: url('src/main/resources/static/images/Bebidas/cubitera.jpg');">
+	<div class="hero-wrap hero-bread" style="background-image: url('img/Bebidas/cubitera.jpg');">
 		<div class="container">
 		  <div class="row no-gutters slider-text align-items-center justify-content-center">
 			<div class="col-md-9 ftco-animate text-center">
-				<p class="breadcrumbs"><span class="mr-2"><a href="index.html">Inicio</a></span> <span>Productos</span></p>
+				<p class="breadcrumbs"><span class="mr-2"><a href="principal">Inicio</a></span> <span>Productos</span></p>
 			  <h1 class="mb-0 bread">Bebidas</h1>
 			</div>
 		  </div>
@@ -93,8 +92,8 @@
 			  <div class="row">
 				  <div class="col-md-6 col-lg-3 ftco-animate">
 					  <div class="product">
-							  <a href="#" class="img-prod"><img alt="Cambiar imagen" height="205" onmouseout="this.src='images/Bebidas/guilfa_blanco.png';
-								  " onmouseover="this.src='img/Bebidas/copa-blanco.jpg';" src="src/main/resources/static/img/Bebidas/guilfa_blanco.png" />
+							  <a href="#" class="img-prod"><img alt="Cambiar imagen" height="205" onmouseout="this.src='img/Bebidas/guilfa_blanco.png';
+								  " onmouseover="this.src='img/Bebidas/copa-blanco.jpg';" src="img/Bebidas/guilfa_blanco.png" />
 							  </a>
 						  
 						  <div class="text py-3 pb-4 px-3 text-center">
@@ -122,8 +121,8 @@
 				  </div>
 				  <div class="col-md-6 col-lg-3 ftco-animate">
 					  <div class="product">
-						  <a href="#" class="img-prod"><img alt="Cambiar imagen" height="205" onmouseout="this.src='images/Bebidas/guilfa.png';
-							  " onmouseover="this.src='images/Bebidas/copa-tinto.jpg';" src="images/Bebidas/guilfa.png" />
+						  <a href="#" class="img-prod"><img alt="Cambiar imagen" height="205" onmouseout="this.src='img/Bebidas/guilfa.png';
+							  " onmouseover="this.src='img/Bebidas/copa-tinto.jpg';" src="img/Bebidas/guilfa.png" />
 							  
 						  </a>
 						  <div class="text py-3 pb-4 px-3 text-center">
@@ -151,8 +150,8 @@
 				  </div>
 				  <div class="col-md-6 col-lg-3 ftco-animate">
 					  <div class="product">
-						  <a href="#" class="img-prod"><img alt="Cambiar imagen" height="205" onmouseout="this.src='images/Bebidas/orujo-de-hierbas.png';
-							  " onmouseover="this.src='images/Bebidas/hierbas.jpg';" src="images/Bebidas/orujo-de-hierbas.png" />
+						  <a href="#" class="img-prod"><img alt="Cambiar imagen" height="205" onmouseout="this.src='img/Bebidas/orujo-de-hierbas.png';
+							  " onmouseover="this.src='img/Bebidas/hierbas.jpg';" src="img/Bebidas/orujo-de-hierbas.png" />
 							  
 						  </a>
 						  <div class="text py-3 pb-4 px-3 text-center">
@@ -181,8 +180,8 @@
   
 				  <div class="col-md-6 col-lg-3 ftco-animate">
 					  <div class="product">
-							  <a href="#" class="img-prod"><img alt="Cambiar imagen" height="205" onmouseout="this.src='images/Bebidas/orujo-de-miel.png';
-								  " onmouseover="this.src='images/Bebidas/miel.jpg';" src="images/Bebidas/orujo-de-miel.png" />
+							  <a href="#" class="img-prod"><img alt="Cambiar imagen" height="205" onmouseout="this.src='img/Bebidas/orujo-de-miel.png';
+								  " onmouseover="this.src='img/Bebidas/miel.jpg';" src="img/Bebidas/orujo-de-miel.png" />
 							  </a>
 						  <div class="text py-3 pb-4 px-3 text-center">
 							  <h3><a href="#">Orujo de miel</a></h3>
@@ -209,8 +208,8 @@
 			  </div>
 			  <div class="col-md-6 col-lg-3 ftco-animate">
 				  <div class="product">
-					  <a href="#" class="img-prod"><img alt="Cambiar imagen" height="205" onmouseout="this.src='images/Bebidas/licor-arandanos.png';
-						  " onmouseover="this.src='images/Bebidas/miel.jpg';" src="images/Bebidas/licor-arandanos.png" />
+					  <a href="#" class="img-prod"><img alt="Cambiar imagen" height="205" onmouseout="this.src='img/Bebidas/licor-arandanos.png';
+						  " onmouseover="this.src='img/Bebidas/miel.jpg';" src="img/Bebidas/licor-arandanos.png" />
 					  </a>
 					  <div class="text py-3 pb-4 px-3 text-center">
 						  <h3><a href="#">Licor de arándanos</a></h3>
@@ -237,8 +236,8 @@
 			  </div>
 			  <div class="col-md-6 col-lg-3 ftco-animate">
 				  <div class="product">
-					  <a href="#" class="img-prod"><img alt="Cambiar imagen" height="205" onmouseout="this.src='images/Bebidas/trabanco.jpg';
-						  " onmouseover="this.src='images/Bebidas/sidra-principal.jpg';" src="images/Bebidas/trabanco.jpg" />
+					  <a href="#" class="img-prod"><img alt="Cambiar imagen" height="205" onmouseout="this.src='img/Bebidas/trabanco.jpg';
+						  " onmouseover="this.src='img/Bebidas/sidra-principal.jpg';" src="img/Bebidas/trabanco.jpg" />
 					  </a>
 					  <div class="text py-3 pb-4 px-3 text-center">
 						  <h3><a href="#">Sidra Trabanco</a></h3>
@@ -266,8 +265,8 @@
   
 			  <div class="col-md-6 col-lg-3 ftco-animate">
 				  <div class="product">
-					  <a href="#" class="img-prod"><img alt="Cambiar imagen" height="205" onmouseout="this.src='images/Bebidas/licor-sidra-dulce.png';
-						  " onmouseover="this.src='images/Bebidas/manzana.jpg';" src="images/Bebidas/licor-sidra-dulce.png" />
+					  <a href="#" class="img-prod"><img alt="Cambiar imagen" height="205" onmouseout="this.src='img/Bebidas/licor-sidra-dulce.png';
+						  " onmouseover="this.src='img/Bebidas/manzana.jpg';" src="img/Bebidas/licor-sidra-dulce.png" />
 					  </a>
 					  <div class="text py-3 pb-4 px-3 text-center">
 						  <h3><a href="#">Licor de sidra dulce</a></h3>
@@ -295,8 +294,8 @@
   
 		  <div class="col-md-6 col-lg-3 ftco-animate">
 			  <div class="product">
-				  <a href="#" class="img-prod"><img alt="Cambiar imagen" height="205" onmouseout="this.src='images/Bebidas/sidra-baraga.jpg';
-					  " onmouseover="this.src='images/Bebidas/vaso.jpeg';" src="images/Bebidas/sidra-baraga.jpg" />
+				  <a href="#" class="img-prod"><img alt="Cambiar imagen" height="205" onmouseout="this.src='img/Bebidas/sidra-baraga.jpg';
+					  " onmouseover="this.src='img/Bebidas/vaso.jpeg';" src="img/Bebidas/sidra-baraga.jpg" />
 				  </a>
 				  <div class="text py-3 pb-4 px-3 text-center">
 					  <h3><a href="#">Sidra DOP</a></h3>
@@ -436,7 +435,6 @@
 			// Get the element with id="defaultOpen" and click on it
 			document.getElementById("defaultOpen").click();
 		</script>
-
 
   <!-- loader -->
 

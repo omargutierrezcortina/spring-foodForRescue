@@ -48,6 +48,23 @@ text-decoration:none;
         <a class="nav-link" href="/productos">Compra</a>
       </li>  
       <li class="nav-item">
+<!--         <a class="nav-link" href="/categorias">Categorias</a> -->
+        <li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" 
+										role="button" aria-haspopup="true" aria-expanded="false">Categorias</a>
+										<div class="dropdown-menu">
+										  <a class="dropdown-item" href="../panaderia">Panadería</a>
+										  <a class="dropdown-item" href="../legumbres">Legumbres</a>
+										  <a class="dropdown-item" href="../frutosSecos">Frutos Secos</a>
+										  <a class="dropdown-item" href="../embutidos">Embutidos</a>
+										  <a class="dropdown-item" href="../conservas">Conservas</a>
+										  <a class="dropdown-item" href="../quesos">Quesos</a>
+										  <a class="dropdown-item" href="../postres">Postres </a>
+										  <a class="dropdown-item" href="/bebidas">Bebidas</a>
+										</div>
+									  </li>
+      </li>
+      <li class="nav-item">
         <a class="nav-link" href="/compra">Carrito</a>
       </li>
         <li class="nav-item">
