@@ -12,15 +12,15 @@
     
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/styles.css">
         
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/open-iconic-bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/open-iconic-bootstrap.min.css">
     
-    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800&display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/animate.css"/>
     
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/static/css/owl.carousel.min.css'"/>
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/owl.carousel.min.css'"/>
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/owl.theme.default.min.css'"/>
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/magnific-popup.css"/>
 
@@ -33,10 +33,10 @@
 
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/flaticon.css"/>
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/icomoon.css"/>
-	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/static/css/style.css"/>
+	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/style.css"/>
 	
 <!-- Bootstrap core CSS -->
-	<link type="text/css" href="${pageContext.request.contextPath}/static/css/bootstrap.min.css" rel="stylesheet"/>
+	<link type="text/css" href="${pageContext.request.contextPath}/static/css/bootstrap.min.css" rel="stylesheet">
 
 <!-- Custom fonts for this template -->
 	<link href="../img/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
