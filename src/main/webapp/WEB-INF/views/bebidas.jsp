@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+    pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ include file = "/WEB-INF/views/navbar.jsp" %>
 
@@ -436,24 +436,22 @@
 			document.getElementById("defaultOpen").click();
 		</script>
 
-  <!-- loader -->
-
-  <script src="js/jquery.min.js"></script>
-  <script src="js/jquery-migrate-3.0.1.min.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/jquery.easing.1.3.js"></script>
-  <script src="js/jquery.waypoints.min.js"></script>
-  <script src="js/jquery.stellar.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/jquery.magnific-popup.min.js"></script>
-  <script src="js/aos.js"></script>
-  <script src="js/jquery.animateNumber.min.js"></script>
-  <script src="js/bootstrap-datepicker.js"></script>
-  <script src="js/scrollax.min.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-  <script src="js/google-map.js"></script>
-  <script src="js/main.js"></script>
+  <script src="${pageContext.request.contextPath}/js/jquery.min.js"></script>
+  <script src="${pageContext.request.contextPath}/js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="${pageContext.request.contextPath}/js/popper.min.js"></script>
+  <script src="${pageContext.request.contextPath}/js/bootstrap.min.js"></script>
+  <script src="${pageContext.request.contextPath}/js/jquery.easing.1.3.js"></script>
+  <script src="${pageContext.request.contextPath}/js/jquery.waypoints.min.js"></script>
+  <script src="${pageContext.request.contextPath}/js/jquery.stellar.min.js"></script>
+  <script src="${pageContext.request.contextPath}/js/owl.carousel.min.js"></script>
+  <script src="${pageContext.request.contextPath}/js/jquery.magnific-popup.min.js"></script>
+  <script src="${pageContext.request.contextPath}/js/aos.js"></script>
+  <script src="${pageContext.request.contextPath}/js/jquery.animateNumber.min.js"></script>
+  <script src="${pageContext.request.contextPath}/js/bootstrap-datepicker.js"></script>
+  <script src="${pageContext.request.contextPath}/js/scrollax.min.js"></script>
+  <script src="${pageContext.request.contextPath}/https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="${pageContext.request.contextPath}/js/google-map.js"></script>
+  <script src="${pageContext.request.contextPath}/js/main.js"></script>
     
   </body>
 </html>
