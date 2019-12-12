@@ -35,9 +35,9 @@
 				<th>Precio</th>
 				<th>Categoría</th>
 				<th>Fabricante</th>
-				<th>Descuento</th>
+				<th>Unidades</th>
 				
-				<th>Actions</th>
+				
 			</tr>
 			
 			<c:forEach items="${productos}" var="producto">

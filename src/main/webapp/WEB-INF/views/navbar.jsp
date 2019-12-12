@@ -45,22 +45,19 @@ text-decoration:none;
         <a class="nav-link" href="/reciclajes">Reciclaje</a>
       </li>  
       <li class="nav-item">
-        <a class="nav-link" href="/productos">Compra</a>
-      </li>  
-      <li class="nav-item">
 <!--         <a class="nav-link" href="/categorias">Categorias</a> -->
         <li class="nav-item dropdown">
 								<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" 
 										role="button" aria-haspopup="true" aria-expanded="false">Categorias</a>
 										<div class="dropdown-menu">
-										  <a class="dropdown-item" href="../panaderia">Panadería</a>
-										  <a class="dropdown-item" href="../legumbres">Legumbres</a>
-										  <a class="dropdown-item" href="../frutos-secos">Frutos Secos</a>
-										  <a class="dropdown-item" href="/embutidos">Embutidos</a>
-										  <a class="dropdown-item" href="../conservas">Conservas</a>
-										  <a class="dropdown-item" href="../quesos">Quesos</a>
-										  <a class="dropdown-item" href="../postres">Postres </a>
-										  <a class="dropdown-item" href="/bebidas">Bebidas</a>
+										  <a class="dropdown-item" href="/categoria/3">Panadería</a>
+										  <a class="dropdown-item" href="/categoria/1">Legumbres</a>
+										  <a class="dropdown-item" href="/categoria/7">Frutos Secos</a>
+										  <a class="dropdown-item" href="/categoria/5">Embutidos</a>
+										  <a class="dropdown-item" href="/categoria/4">Conservas</a>
+										  <a class="dropdown-item" href="/categoria/8">Quesos</a>
+										  <a class="dropdown-item" href="/categoria/6">Postres </a>
+										  <a class="dropdown-item" href="/categoria/2">Bebidas</a>
 										</div>
 									  </li>
       </li>

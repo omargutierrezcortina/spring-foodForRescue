@@ -20,6 +20,7 @@ import com.foodForRescue.spring.model.Categoria;
 import com.foodForRescue.spring.model.Compra;
 import com.foodForRescue.spring.model.Producto;
 import com.foodForRescue.spring.model.Reciclaje;
+import com.foodForRescue.spring.model.TiposCategoria;
 import com.foodForRescue.spring.model.Usuario;
 import com.foodForRescue.spring.repository.ProductoRepository;
 import com.foodForRescue.spring.repository.ReciclajeRepository;
@@ -95,179 +96,42 @@ public class ProductController {
 	}
 
 	/**
-	 * GET /products/:id : get the "id" product.
-	 *
-	 * @param id the id of the product to retrieve
-	 * @return
-	 */
-	@GetMapping("/productos/{id}")
-	public ModelAndView getProducto(@PathVariable Long id, HttpSession session) {
-		if (!UserUtil.usuarioEnSesion(session)) {
-			ModelAndView login = new ModelAndView();
-			login.setViewName("Login");
-			return login;
-		}
-		log.debug("request to get Product : {}", id);
-		Optional<Producto> producto = productoRepository.findById(id);
-
-		List<Producto> cesta = (List<Producto>) session.getAttribute("cesta");
-		if (cesta == null) {
-			cesta = new ArrayList<>();
-		}
-		ModelAndView mav = new ModelAndView();
-		if (producto.isPresent()) {
-			mav.setViewName("producto-list");
-			anadirProductoACesta(producto.get(), cesta);
-			session.setAttribute("cesta", cesta);
-			mav.addObject("numProductos", cesta.size());
-			mav.addObject("productos", productoRepository.findAll());
-			Usuario usuario = (Usuario) session.getAttribute("user");
-			mav.addObject("reciclajes", reciclajeRepository.findByUsuario(usuario.getId()));
-		} else {
-			mav.setViewName("producto-list");
-			mav.addObject("message", "Producto no encontrado");
-		}
-
-		return mav;
-	}
-
-	/**
-	 * 
-	 * 
-	 * 
-	 * 
-	 * 
-	 * 
 	 * 
 	 * @param session
 	 * @return
 	 */
-	
-	
-	@GetMapping("/bebidas")
-	public ModelAndView getByIdBebidas(HttpSession session) {
+	@GetMapping("/categoria/{id}")
+	public ModelAndView irACategoria(@PathVariable int id, HttpSession session) {
 		if (!UserUtil.usuarioEnSesion(session)) {
 			ModelAndView login = new ModelAndView();
 			login.setViewName("Login");
 			return login;
-		}
-		log.debug("request to get Bebidas");
-		ModelAndView mav = new ModelAndView();
-		mav.setViewName("bebidas");
-		mav.addObject("bebidas", productoRepository.findByCategoria(String.valueOf(Categoria.BEBIDAS.getId())));
-		return mav;
-	}
-	
-	@GetMapping("/legumbres")
-	public ModelAndView getByIdLegumbres(HttpSession session) {
-		if (!UserUtil.usuarioEnSesion(session)) {
-			ModelAndView login = new ModelAndView();
-			login.setViewName("Login");
-			return login;
-		}
-		log.debug("request to get Legumbres");
-		ModelAndView mav = new ModelAndView();
-		mav.setViewName("legumbres");
-		mav.addObject("legumbres", productoRepository.findByCategoria(String.valueOf(Categoria.LEGUMBRES.getId())));
-		return mav;
-	}
-	
-	@GetMapping("/panaderia")
-	public ModelAndView getByIdPanaderia(HttpSession session) {
-		if (!UserUtil.usuarioEnSesion(session)) {
-			ModelAndView login = new ModelAndView();
-			login.setViewName("Login");
-			return login;
-		}
-		log.debug("request to get Panaderia");
-		ModelAndView mav = new ModelAndView();
-		mav.setViewName("panaderia");
-		mav.addObject("panaderia", productoRepository.findByCategoria(String.valueOf(Categoria.PANADERIA.getId())));
-		return mav;
-	}
-	
-	@GetMapping("/conservas")
-	public ModelAndView getByIdConservas(HttpSession session) {
-		if (!UserUtil.usuarioEnSesion(session)) {
-			ModelAndView login = new ModelAndView();
-			login.setViewName("Login");
-			return login;
-		}
-		log.debug("request to get Conservas");
-		ModelAndView mav = new ModelAndView();
-		mav.setViewName("conservas");
-	//	mav.addObject("conservas", productoRepository.findByCategoria());
-		return mav;
-	}
-	
-	
-	@GetMapping("/postres")
-	public ModelAndView getByIdPostres(HttpSession session) {
-		if (!UserUtil.usuarioEnSesion(session)) {
-			ModelAndView login = new ModelAndView();
-			login.setViewName("Login");
-			return login;
-		}
-		log.debug("request to get Postres");
-		ModelAndView mav = new ModelAndView();
-		mav.setViewName("postres");
-		//mav.addObject("postres", productoRepository.findByCategoria());
-		return mav;
-	}
-	
 
-	@GetMapping("/quesos")
-	public ModelAndView getByIdQuesos(HttpSession session) {
-		if (!UserUtil.usuarioEnSesion(session)) {
-			ModelAndView login = new ModelAndView();
-			login.setViewName("Login");
-			return login;
-		}
-		log.debug("request to get Quesos");
+		} 
+		// Buscamos la categoria
+		TiposCategoria tipo = null;
+		for (TiposCategoria tc : TiposCategoria.values()) {
+			if (tc.getId() == id) {
+				tipo = tc;
+			}
+		}  
 		ModelAndView mav = new ModelAndView();
-		mav.setViewName("quesos");
-		//mav.addObject("quesos", productoRepository.findByCategoria());
-		return mav;
-	}
-	
-	@GetMapping("/embutidos")
-	public ModelAndView getByIdEmbutidos(HttpSession session) {
-		if (!UserUtil.usuarioEnSesion(session)) {
-			ModelAndView login = new ModelAndView();
-			login.setViewName("Login");
-			return login;
+		if (tipo != null) {
+			log.debug("request to get Bebidas");
+
+			mav.setViewName("categoria");
+			Categoria categoria = new Categoria();
+			categoria.setTitulo(tipo.getValue());
+			categoria.setImagen(tipo.getImagen());
+			categoria.setProductos(productoRepository.findByCategoria(tipo.getId()));
+			mav.addObject("categoria", categoria);
+		} else {
+			mav.setViewName("principal");
 		}
-		log.debug("request to get Embutidos");
-		ModelAndView mav = new ModelAndView();
-		mav.setViewName("embutidos");
-		//mav.addObject("embutidos", productoRepository.findByCategoria());
 		return mav;
+
 	}
-	
-	@GetMapping("/frutosSecos")
-	public ModelAndView getByIdFrutosSecos(HttpSession session) {
-		if (!UserUtil.usuarioEnSesion(session)) {
-			ModelAndView login = new ModelAndView();
-			login.setViewName("Login");
-			return login;
-		}
-		log.debug("request to get FrutosSecos");
-		ModelAndView mav = new ModelAndView();
-		mav.setViewName("frutosSecos");
-		//mav.addObject("frutosSecos", productoRepository.findByCategoria());
-		return mav;
-	}
-	
-	
-	/**
-	 * 
-	 * 
-	 * 
-	 * 
-	 * 
-	 */
-	
-	
+
 	/**
 	 * Busca el rpoducto en la cesta y si existe suma una unidad, en caso contrario
 	 * introduce el producto en la cesta
@@ -299,54 +163,36 @@ public class ProductController {
 	 * @param id the id of the product to retrieve
 	 * @return
 	 */
-	@PostMapping("/productos")
-	public String saveProduct(@ModelAttribute("producto") Producto producto,HttpSession session) {
+	@GetMapping("/carrito/{id}")
+	public String saveProduct(@PathVariable Long id, HttpSession session) {
 		if (!UserUtil.usuarioEnSesion(session)) {
 			return "redirect:/login";
+		} 
+		log.debug("request to save Product : {}", id);
+		Optional<Producto> productoOpt = productoRepository.findById(id);
+		Producto producto = productoOpt.get();
+		List<Producto> cesta = (List<Producto>) session.getAttribute("cesta");
+		if (cesta == null) {
+			cesta = new ArrayList<>();
 		}
-		log.debug("request to save Product : {}", producto);
-
-		// El producto no existe y tenemos que crearlo
-		if (producto.getId() == null) {
-			productoRepository.save(producto);
-			return "redirect:/productos";
-		}
-
 		// El producto ya existe y tenemos que actualizarlo
 		Optional<Producto> existingProductoWrap = productoRepository.findById(producto.getId());
 		if (existingProductoWrap.isPresent()) {
-			Producto existingProducto = existingProductoWrap.get();
-			existingProducto.setReferencia(producto.getReferencia());
-			existingProducto.setPrecio(producto.getPrecio());
-			existingProducto.setPeso(producto.getPeso());
-			existingProducto.setCategoria(producto.getCategoria());
-			existingProducto.setFabricante(producto.getFabricante());
-			existingProducto.setDescuento(producto.getDescuento());
-			existingProducto.setDenominacion(producto.getDenominacion());
-
-			/*
-			 * approach 2: En caso de no utilizar cascade = {CascadeType.ALL} entre Product
-			 * y ProductSize será necesario descomentar la siguiente linea para guardar
-			 * manualmente
-			 */
-//			productSizeRepository.save(existingProducto.getProductoSize());
-			productoRepository.save(existingProducto);
+			anadirProductoACesta(producto, cesta);
+			session.setAttribute("cesta", cesta);
 		}
-		return "redirect:/productos";
+ 
+		// Buscamos la ruta del producto
+		int idCategoria = 0;
+		for (TiposCategoria e : TiposCategoria.values()) {
+			if (e.getId() == producto.getIdCategoria()) {
+				idCategoria = e.getId();
+			}
+		}
+
+		return "redirect:/categoria/" + idCategoria;
 	}
 
-	/**
-	 * /products/:id/delete : delete the "id" product.
-	 *
-	 * @param id the id of the product to delete
-	 * @return
-	 */
-	@GetMapping("/productos/{id}/delete")
-	public String deleteProducto(@PathVariable Long id) {
-		log.debug("request to delete Producto : {}", id);
-		productoRepository.deleteById(id);
-		return "redirect:/productos";
-	}
 
 	@GetMapping("/compra")
 	public ModelAndView compra(HttpSession session) {
@@ -381,14 +227,14 @@ public class ProductController {
 		ModelAndView mav = new ModelAndView();
 		if (reciclaje != null) {
 			mav.setViewName("descuento");
-			
+
 			// Calcular el descuento a la compra
-			calcularPrecioCompra(reciclaje, cesta,compra);
+			calcularPrecioCompra(reciclaje, cesta, compra);
 			mav.addObject("productos", cesta);
 			mav.addObject("compra", compra);
 		} else {
 			mav.setViewName("descuento");
-			
+
 			// No se aplicaria descuento
 			calcularPrecioCompra(null, cesta, compra);
 			mav.addObject("productos", cesta);
@@ -407,7 +253,7 @@ public class ProductController {
 		}
 
 		compra.setPrecio(precio);
-		
+
 		// Si existe reciclaje aplicamos el descuento
 		if (reciclaje != null) {
 			double descuento = (precio * reciclaje.getDescuento()) / 100L;
@@ -416,17 +262,5 @@ public class ProductController {
 
 		return precio;
 	}
-	
-	
-	private int calcularNumeroProductos(List<Producto> cesta, Compra compra) {
-		int numero = 0;
-
-		for (Producto productoEncesta : cesta) {
-			numero = numero +  productoEncesta.getCantidad();
-		}
-
-		return numero;
-	}
-
 
 }

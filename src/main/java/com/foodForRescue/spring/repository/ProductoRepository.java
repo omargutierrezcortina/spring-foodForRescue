@@ -13,10 +13,10 @@ import com.foodForRescue.spring.model.Producto;
 public interface ProductoRepository extends JpaRepository<Producto, Long>{
 
 	@Query
-	("SELECT u FROM Producto p WHERE p.idCategoria= :categoria ")
-	List<Producto> findByCategoria(@Param("categoria")String categoria);
+	("SELECT p FROM Producto p WHERE p.idCategoria= :categoria ")
+	List<Producto> findByCategoria(@Param("categoria")int categoria);
 
 	
- 
+   
 
 }

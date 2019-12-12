@@ -20,8 +20,8 @@
 
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/animate.css"/>
     
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/owl.carousel.min.css'"/>
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/owl.theme.default.min.css'"/>
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/owl.carousel.min.css"/>
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/owl.theme.default.min.css"/>
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/magnific-popup.css"/>
 
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/aos.css">
@@ -39,7 +39,6 @@
 	<link type="text/css" href="${pageContext.request.contextPath}/css/bootstrap.min.css" rel="stylesheet">
 
 <!-- Custom fonts for this template -->
-	<link href="../img/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
@@ -66,11 +65,11 @@
 
 
       <!----------------------------------------------------CARROUSEL------------------------------------------------------------------>
-	<div class="hero-wrap hero-bread" style="background-image: url('img/conservas/conservas.jpg');">>
+	<div class="hero-wrap hero-bread" style="background-image: url('${pageContext.request.contextPath}/${categoria.imagen}');">
 		<div class="container">
 		  <div class="row no-gutters slider-text align-items-center justify-content-center">
 			<div class="col-md-9 ftco-animate text-center">
-					<p class="breadcrumbs"><span class="mr-2">Inicio</span> <span>Productos</span></p>			  <h1 class="mb-0 bread">${categoria.nombre}</h1>
+					<p class="breadcrumbs"><span class="mr-2">Inicio</span> <span>Productos</span></p>			  <h1 class="mb-0 bread">${categoria.titulo}</h1>
 			</div>
 		  </div>
 		</div>
@@ -83,7 +82,7 @@
 				  <div class="col-md-10 mb-5 text-center">
 					  <ul class="product-category">
 						  <c:forEach items="${categoria.productos}" var="producto">
-						    <li><a href="#">{producto.nombre}</a></li>
+						    <li><a href="#">${producto.categoria}</a></li>
 						  </c:forEach>
 					  </ul>
 				  </div>
@@ -93,12 +92,11 @@
 			    <c:forEach items="${categoria.productos}" var="producto">
 			    <div class="col-md-6 col-lg-3 ftco-animate">
 					  <div class="product">
-						  <a href="#" class="img-prod"><img alt="Cambiar imagen" height="210" onmouseout="this.src='img/conservas/fabada.jpg';
-							  " onmouseover="this.src='img/conservas/fabada2.jpg';" src="img/conservas/fabada.jpg" />
+						  <a href="#" class="img-prod"><img alt="Cambiar imagen" height="210" onmouseout="this.src='${pageContext.request.contextPath}/${producto.foto1}'" onmouseover="this.src='${pageContext.request.contextPath}/${producto.foto2}'" src="${pageContext.request.contextPath}/${producto.foto1}" />
 							  
 						  </a>
 						  <div class="text py-3 pb-4 px-3 text-center">
-							  <h3><a href="#">${producto.nombre}</a></h3>
+							  <h3><a href="#">${producto.categoria}</a></h3>
 							  <div class="d-flex">
 								  <div class="pricing">
 									  <p class="price"><span>${producto.precio}</span></p>
@@ -106,7 +104,7 @@
 							  </div>
 							  <div class="bottom-area d-flex px-3">
 								  <div class="m-auto d-flex">								
-									  <a href="#" class="buy-now d-flex justify-content-center align-items-center mx-1">
+									  <a href="${pageContext.request.contextPath}/carrito/${producto.id}" class="buy-now d-flex justify-content-center align-items-center mx-1">
 										  <span><i class="ion-ios-cart"></i></span>
 									  </a>								
 								  </div>
@@ -210,30 +208,6 @@
 		<!-- Plugin JavaScript -->
 		<script src="${pageContext.request.contextPath}/vendor/jquery-easing/jquery.easing.min.js"></script>
 	
-		<!-- Custom scripts for this template -->
-		<script src="${pageContext.request.contextPath}/js/grayscale.min.js"></script>
-
-
-
-
-		<script type="text/javascript">
-			function openCity(evt, cityName) {
-				var i, tabcontent, tablinks;
-				tabcontent = document.getElementsByClassName("tabcontent");
-				for (i = 0; i < tabcontent.length; i++) {
-					tabcontent[i].style.display = "none";
-				}
-				tablinks = document.getElementsByClassName("tablinks");
-				for (i = 0; i < tablinks.length; i++) {
-					tablinks[i].className = tablinks[i].className.replace(" active", "");
-				}
-				document.getElementById(cityName).style.display = "block";
-				evt.currentTarget.className += " active";
-			}
-		
-			// Get the element with id="defaultOpen" and click on it
-			document.getElementById("defaultOpen").click();
-		</script>
 
 
 <script src="${pageContext.request.contextPath}/js/jquery.min.js"></script>
@@ -249,8 +223,6 @@
   <script src="${pageContext.request.contextPath}/js/jquery.animateNumber.min.js"></script>
   <script src="${pageContext.request.contextPath}/js/bootstrap-datepicker.js"></script>
   <script src="${pageContext.request.contextPath}/js/scrollax.min.js"></script>
-  <script src="${pageContext.request.contextPath}/https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-  <script src="${pageContext.request.contextPath}/js/google-map.js"></script>
   <script src="${pageContext.request.contextPath}/js/main.js"></script>
   </body>
 </html>

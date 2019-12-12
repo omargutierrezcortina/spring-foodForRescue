@@ -29,38 +29,18 @@
 		<hr/>
 		<p>${aviso}</p>
 		
-		<form:form action = "${pageContext.request.contextPath}/login" method="POST" modelAttribute="usuario"> 
 		
 		<div class="d-flex justify-content-center h-100">
 		<div class="card">
 			<div class="card-header">
 				<h3>Inicio de Sesión</h3>
 			</div>
-			<div class="card-body">
-			
-					<div class="input-group form-group">
-						<div class="input-group-prepend">
-							<span class="input-group-text"><i class="fas fa-user"></i></span>
-						</div>
-					<div class = "form-group">
-					  <label for="email">Email</label>
-					  <form:input type ="email" path="email" class = "form-control" />
-	
-<!-- 	<div id="id01" class="w3-modal"> --> 
-<!-- 	<div class="page-content"> -->
-	<div class = "container">	
+
 		<div class="form-v8-content">
 		<div class="form-right">
 				<span onclick="document.getElementById('id01').style.display='none'" 
 				class="w3-button w3-display-topright">&times;</span>
 			
-	
-	
-		<h1>User Login</h1>
-		<hr/>
-		<p>${aviso}</p>
-		<div class = "row">
-			<div class = "col-md-4">
 	
 			    <form:form action = "${pageContext.request.contextPath}/login" method="POST" modelAttribute="usuario">	
 					<div class="form-row">
@@ -85,16 +65,13 @@
 				</form:form>
 			</div>
 		</div>
+		</div>
+		</div>
+		</div>
 		</header>	
 		
 					
 		
-				
-
-</div>
-</div>
-</div>
-
 
 	
 

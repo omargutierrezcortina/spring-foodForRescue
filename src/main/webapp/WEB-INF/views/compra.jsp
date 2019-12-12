@@ -2,13 +2,13 @@
     pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
-<%@ include file = "/WEB-INF//views/navbar.jsp" %>
+<%@ include file = "/WEB-INF/views/navbar.jsp" %>
    
 <!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>producto List | Awesome App</title>
+<title>Carrito - FFR</title>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
 
@@ -30,9 +30,8 @@
 				<th>Precio</th>
 				<th>Categoría</th>
 				<th>Fabricante</th>
-				<th>Descuento</th>
-				
-				<th>Actions</th>
+					
+				<th>Unidades</th>
 			</tr>
 			
 			<c:forEach items="${productos}" var="producto">
@@ -43,7 +42,6 @@
 					<td>${producto.precio}</td>
 					<td>${producto.categoria}</td>
 					<td>${producto.fabricante}</td>
-					<td>${producto.descuento}</td>
 					<td>${producto.cantidad}</td>
 					<td> 
 					</td>
@@ -61,12 +59,7 @@
  						 	<button class = "btn btn-primary" type = "submit" >Aplicar</button>
 
 		 </form:form>
-		
-<!-- 					<div class="form-group"> -->
-<!-- 					<label for="reciclajes">Reciclajes</label> <br> -->
-<%-- 						<form:select class = "form-control" path="" --%>
-<%--  						 items="${reciclajes}" itemLabel="descripcion" itemValue="id"/> --%>
-<!-- 					</div> -->
+
 						
  						 
 				

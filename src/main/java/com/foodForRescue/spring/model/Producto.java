@@ -91,10 +91,10 @@ public class Producto implements Serializable {
 		super();
 	}
 
-	public Producto(String referencia, int peso, double precio, String categoria, String fabricante,
-			int descuento, String denominacion, int idCategoria) {
+	public Producto(Long id, String referencia, int peso, double precio, String categoria, String fabricante,
+			int descuento, String denominacion, int idCategoria, String foto1, String foto2) {
 		super();
-//		this.id = id;
+		this.id = id;
 		this.referencia = referencia;
 		this.peso = peso;
 		this.precio = precio;
@@ -103,9 +103,11 @@ public class Producto implements Serializable {
 		this.descuento = descuento;
 		this.denominacion = denominacion;
 		this.idCategoria = idCategoria;
+		this.foto1 = foto1;
+		this.foto2 = foto2;
 	}
 
-	
+	 
 
 	public Long getId() {
 		return id;

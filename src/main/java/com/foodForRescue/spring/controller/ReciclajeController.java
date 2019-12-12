@@ -1,8 +1,5 @@
 package com.foodForRescue.spring.controller;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import javax.servlet.http.HttpSession;
 
 import org.slf4j.Logger;
@@ -14,8 +11,6 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.foodForRescue.spring.model.Compra;
-import com.foodForRescue.spring.model.Producto;
 import com.foodForRescue.spring.model.Reciclaje;
 import com.foodForRescue.spring.model.TipoReciclaje;
 import com.foodForRescue.spring.model.Usuario;

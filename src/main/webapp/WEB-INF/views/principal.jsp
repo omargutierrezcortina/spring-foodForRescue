@@ -67,8 +67,6 @@
                      <br><br><br>
                 </div>
             </div>
-            <!-- IMAGEN DEBAJE DE LA PRINCIPAL -->
-            <img src="img/.jpg" class="img-fluid" alt="">
         </div>
     </section>
 	
@@ -238,16 +236,7 @@
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Plugin JavaScript -->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-
-    <!-- Custom scripts for this template -->
-    <script src="js/grayscale.min.js"></script>
-
-
-	
-	
-	
-	
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>	
 	
 	
 	<p> Esta es la pantalla principal de FFR </p>
