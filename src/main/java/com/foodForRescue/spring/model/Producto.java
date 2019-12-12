@@ -66,6 +66,13 @@ public class Producto implements Serializable {
 	@Column (name="idCategoria")
 	private int idCategoria;
 	
+	@Column (name="foto1")
+	private String foto1;
+	
+	@Column (name="foto2")
+	private String foto2;
+	
+	
 	// ASOCIACIONES
 //	@ManyToMany(mappedBy = "compra")
 //	private List<Compra> compras = new ArrayList<>();
@@ -183,6 +190,23 @@ public class Producto implements Serializable {
 
 	public void setCantidad(int cantidad) {
 		this.cantidad = cantidad;
+	}
+	
+
+	public String getFoto1() {
+		return foto1;
+	}
+
+	public void setFoto1(String foto1) {
+		this.foto1 = foto1;
+	}
+
+	public String getFoto2() {
+		return foto2;
+	}
+
+	public void setFoto2(String foto2) {
+		this.foto2 = foto2;
 	}
 
 	@Override
