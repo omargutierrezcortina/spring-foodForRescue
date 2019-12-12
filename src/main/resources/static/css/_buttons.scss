@@ -19,7 +19,13 @@
   @include hover {
     color: $body-color;
     text-decoration: none;
+    
   }
+  
+  .btn-primary {
+    color: #fff;
+    background-color: #22923d;
+    border-color: #1ea73c;
 
   &:focus,
   &.focus {

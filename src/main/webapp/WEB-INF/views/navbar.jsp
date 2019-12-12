@@ -55,8 +55,8 @@ text-decoration:none;
 										<div class="dropdown-menu">
 										  <a class="dropdown-item" href="../panaderia">Panadería</a>
 										  <a class="dropdown-item" href="../legumbres">Legumbres</a>
-										  <a class="dropdown-item" href="../frutosSecos">Frutos Secos</a>
-										  <a class="dropdown-item" href="../embutidos">Embutidos</a>
+										  <a class="dropdown-item" href="../frutos-secos">Frutos Secos</a>
+										  <a class="dropdown-item" href="/embutidos">Embutidos</a>
 										  <a class="dropdown-item" href="../conservas">Conservas</a>
 										  <a class="dropdown-item" href="../quesos">Quesos</a>
 										  <a class="dropdown-item" href="../postres">Postres </a>
