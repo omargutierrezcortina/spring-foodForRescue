@@ -25,8 +25,9 @@
 
 </head>
 <body>
+<header class="masthead">
 	<div class ="container">
-		<h1>User Login</h1>
+		<h1>Food For Rescue</h1>
 		<hr/>
 		<p>${aviso}</p>
 		
@@ -36,11 +37,6 @@
 		<div class="card">
 			<div class="card-header">
 				<h3>Inicio de Sesión</h3>
-				<div class="d-flex justify-content-end social_icon">
-					<span><i class="fab fa-facebook-square"></i></span>
-					<span><i class="fab fa-google-plus-square"></i></span>
-					<span><i class="fab fa-twitter-square"></i></span>
-				</div>
 			</div>
 			<div class="card-body">
 			
@@ -66,7 +62,7 @@
 		</div>
 		</form:form>
 		</div>
-				
+		</header>	
 		
 					
 		

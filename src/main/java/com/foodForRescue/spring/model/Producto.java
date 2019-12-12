@@ -60,8 +60,11 @@ public class Producto implements Serializable {
 	@Column (name="denominacion")
 	private String denominacion;
 
+	@Column (name="cantidad")
 	private int cantidad;
 	
+	@Column (name="idCategoria")
+	private int idCategoria;
 	
 	// ASOCIACIONES
 //	@ManyToMany(mappedBy = "compra")
@@ -75,12 +78,14 @@ public class Producto implements Serializable {
 	
 //	private List<Tag> tags = new ArrayList<>();
 
+	
+
 	public Producto() {
 		super();
 	}
 
 	public Producto(String referencia, int peso, double precio, String categoria, String fabricante,
-			int descuento, String denominacion) {
+			int descuento, String denominacion, int idCategoria) {
 		super();
 //		this.id = id;
 		this.referencia = referencia;
@@ -90,7 +95,10 @@ public class Producto implements Serializable {
 		this.fabricante = fabricante;
 		this.descuento = descuento;
 		this.denominacion = denominacion;
+		this.idCategoria = idCategoria;
 	}
+
+	
 
 	public Long getId() {
 		return id;
@@ -156,6 +164,14 @@ public class Producto implements Serializable {
 		this.denominacion = denominacion;
 	}
 
+	public int getIdCategoria() {
+		return idCategoria;
+	}
+
+	public void setIdCategoria(int idCategoria) {
+		this.idCategoria = idCategoria;
+	}
+
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}
@@ -173,7 +189,7 @@ public class Producto implements Serializable {
 	public String toString() {
 		return "Producto [id=" + id + ", referencia=" + referencia + ", peso=" + peso + ", precio=" + precio
 				+ ", categoria=" + categoria + ", fabricante=" + fabricante + ", descuento=" + descuento
-				+ ", denominacion=" + denominacion + "]";
+				+ ", denominacion=" + denominacion + ", cantidad=" + cantidad + ", idCategoria=" + idCategoria + "]";
 	}
 
 	

@@ -9,6 +9,7 @@ import com.foodForRescue.spring.model.Usuario;
 
 public interface UsuarioRepository extends JpaRepository<Usuario, Long>{
 
-	@Query("SELECT u FROM Usuario u WHERE u.email= :email and password= :password ")
+	@Query
+	("SELECT u FROM Usuario u WHERE u.email= :email and password= :password ")
 	Usuario findByEmailAndPassword(@Param("email")String email, @Param("password")String password);
 }

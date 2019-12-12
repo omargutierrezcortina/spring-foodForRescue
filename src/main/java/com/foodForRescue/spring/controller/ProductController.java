@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.foodForRescue.spring.model.Categoria;
 import com.foodForRescue.spring.model.Compra;
 import com.foodForRescue.spring.model.Producto;
 import com.foodForRescue.spring.model.Reciclaje;
@@ -130,6 +131,143 @@ public class ProductController {
 		return mav;
 	}
 
+	/**
+	 * 
+	 * 
+	 * 
+	 * 
+	 * 
+	 * 
+	 * 
+	 * @param session
+	 * @return
+	 */
+	
+	
+	@GetMapping("/bebidas")
+	public ModelAndView getByIdBebidas(HttpSession session) {
+		if (!UserUtil.usuarioEnSesion(session)) {
+			ModelAndView login = new ModelAndView();
+			login.setViewName("Login");
+			return login;
+		}
+		log.debug("request to get Bebidas");
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("bebidas");
+		mav.addObject("bebidas", productoRepository.findByCategoria(String.valueOf(Categoria.BEBIDAS.getId())));
+		return mav;
+	}
+	
+	@GetMapping("/legumbres")
+	public ModelAndView getByIdLegumbres(HttpSession session) {
+		if (!UserUtil.usuarioEnSesion(session)) {
+			ModelAndView login = new ModelAndView();
+			login.setViewName("Login");
+			return login;
+		}
+		log.debug("request to get Legumbres");
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("legumbres");
+		mav.addObject("legumbres", productoRepository.findByCategoria(String.valueOf(Categoria.LEGUMBRES.getId())));
+		return mav;
+	}
+	
+	@GetMapping("/panaderia")
+	public ModelAndView getByIdPanaderia(HttpSession session) {
+		if (!UserUtil.usuarioEnSesion(session)) {
+			ModelAndView login = new ModelAndView();
+			login.setViewName("Login");
+			return login;
+		}
+		log.debug("request to get Panaderia");
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("panaderia");
+		mav.addObject("panaderia", productoRepository.findByCategoria(String.valueOf(Categoria.PANADERIA.getId())));
+		return mav;
+	}
+	
+	@GetMapping("/conservas")
+	public ModelAndView getByIdConservas(HttpSession session) {
+		if (!UserUtil.usuarioEnSesion(session)) {
+			ModelAndView login = new ModelAndView();
+			login.setViewName("Login");
+			return login;
+		}
+		log.debug("request to get Conservas");
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("conservas");
+	//	mav.addObject("conservas", productoRepository.findByCategoria());
+		return mav;
+	}
+	
+	
+	@GetMapping("/postres")
+	public ModelAndView getByIdPostres(HttpSession session) {
+		if (!UserUtil.usuarioEnSesion(session)) {
+			ModelAndView login = new ModelAndView();
+			login.setViewName("Login");
+			return login;
+		}
+		log.debug("request to get Postres");
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("postres");
+		//mav.addObject("postres", productoRepository.findByCategoria());
+		return mav;
+	}
+	
+
+	@GetMapping("/quesos")
+	public ModelAndView getByIdQuesos(HttpSession session) {
+		if (!UserUtil.usuarioEnSesion(session)) {
+			ModelAndView login = new ModelAndView();
+			login.setViewName("Login");
+			return login;
+		}
+		log.debug("request to get Quesos");
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("quesos");
+		//mav.addObject("quesos", productoRepository.findByCategoria());
+		return mav;
+	}
+	
+	@GetMapping("/embutidos")
+	public ModelAndView getByIdEmbutidos(HttpSession session) {
+		if (!UserUtil.usuarioEnSesion(session)) {
+			ModelAndView login = new ModelAndView();
+			login.setViewName("Login");
+			return login;
+		}
+		log.debug("request to get Embutidos");
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("embutidos");
+		//mav.addObject("embutidos", productoRepository.findByCategoria());
+		return mav;
+	}
+	
+	@GetMapping("/frutosSecos")
+	public ModelAndView getByIdFrutosSecos(HttpSession session) {
+		if (!UserUtil.usuarioEnSesion(session)) {
+			ModelAndView login = new ModelAndView();
+			login.setViewName("Login");
+			return login;
+		}
+		log.debug("request to get FrutosSecos");
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("frutosSecos");
+		//mav.addObject("frutosSecos", productoRepository.findByCategoria());
+		return mav;
+	}
+	
+	
+	/**
+	 * 
+	 * 
+	 * 
+	 * 
+	 * 
+	 */
+	
+	
 	/**
 	 * Busca el rpoducto en la cesta y si existe suma una unidad, en caso contrario
 	 * introduce el producto en la cesta
@@ -290,17 +428,6 @@ public class ProductController {
 		return numero;
 	}
 	
-	@GetMapping("/bebidas")
-	public ModelAndView getAllBebidas(HttpSession session) {
-		if (!UserUtil.usuarioEnSesion(session)) {
-			ModelAndView login = new ModelAndView();
-			login.setViewName("Login");
-			return login;
-		}
-		log.debug("request to get Bebidas");
-		ModelAndView mav = new ModelAndView();
-		mav.setViewName("bebidas");
-		return mav;
-	}
+	
 
 }

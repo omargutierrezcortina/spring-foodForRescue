@@ -36,7 +36,8 @@ public class SpringFoodForRescueApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		productoRepository.save(new Producto("cf456d", 500, 2, "panaderia", "ibias", 0, "oriente"));
+		productoRepository.save(new Producto("cf456d", 500, 2, "pan", "ibias", 0, "oriente", 3));
+		productoRepository.save(new Producto("asfsad", 100, 3, "Fabes", "ibias", 0, "oriente", 1));
 		
 		reciclajeRepository.save(new Reciclaje (1L, "vidrio", 2L, 2, 1L));
 		reciclajeRepository.save(new Reciclaje (2L, "papel", 4L, 4, 1L));

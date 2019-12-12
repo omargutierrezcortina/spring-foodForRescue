@@ -97,7 +97,7 @@
 							  </a>
 						  
 						  <div class="text py-3 pb-4 px-3 text-center">
-							  <h3><a href="#">Vino blanco</a></h3>
+							  <h3>Vino blanco</h3>
 							  <div class="d-flex">
 								  <div class="pricing">
 									  <p class="price"><span class="price-sale">8€ 70cl</span></p>
@@ -105,15 +105,12 @@
 							  </div>
 							  <div class="bottom-area d-flex px-3">
 								  <div class="m-auto d-flex">
-									  <a href="#" class="add-to-cart d-flex justify-content-center align-items-center text-center">
-										  <span><i class="ion-ios-menu"></i></span>
+									 
+									
+									  <a class="btn btn-info" href = "${pageContext.request.contextPath}/productos/${producto.id}">Añadir al carro>
+										  
 									  </a>
-									  <a href="#" class="buy-now d-flex justify-content-center align-items-center mx-1">
-										  <span><i class="ion-ios-cart"></i></span>
-									  </a>
-									  <a href="#" class="heart d-flex justify-content-center align-items-center ">
-										  <span><i class="ion-ios-heart"></i></span>
-									  </a>
+									
 								  </div>
 							  </div>
 						  </div>
@@ -129,7 +126,7 @@
 							  <h3><a href="#">Vino tinto</a></h3>
 							  <div class="d-flex">
 								  <div class="pricing">
-									  <p class="price"><span>8€ 70cl</span></p>
+									  <p class="price"><span>8â¬ 70cl</span></p>
 								  </div>
 							  </div>
 							  <div class="bottom-area d-flex px-3">
@@ -158,7 +155,7 @@
 							  <h3><a href="#">Orujo de hierbas</a></h3>
 							  <div class="d-flex">
 								  <div class="pricing">
-									  <p class="price"><span>11€ 70cl</span></p>
+									  <p class="price"><span>11â¬ 70cl</span></p>
 								  </div>
 							  </div>
 							  <div class="bottom-area d-flex px-3">
@@ -187,7 +184,7 @@
 							  <h3><a href="#">Orujo de miel</a></h3>
 							  <div class="d-flex">
 								  <div class="pricing">
-									  <p class="price"><span>11€ 70cl</span></p>
+									  <p class="price"><span>11â¬ 70cl</span></p>
 								  </div>
 							  </div>
 							  <div class="bottom-area d-flex px-3">
@@ -212,10 +209,10 @@
 						  " onmouseover="this.src='img/Bebidas/miel.jpg';" src="img/Bebidas/licor-arandanos.png" />
 					  </a>
 					  <div class="text py-3 pb-4 px-3 text-center">
-						  <h3><a href="#">Licor de arándanos</a></h3>
+						  <h3><a href="#">Licor de arÃ¡ndanos</a></h3>
 						  <div class="d-flex">
 							  <div class="pricing">
-								  <p class="price"><span>9€ 70cl</span></p>
+								  <p class="price"><span>9â¬ 70cl</span></p>
 							  </div>
 						  </div>
 						  <div class="bottom-area d-flex px-3">
@@ -243,7 +240,7 @@
 						  <h3><a href="#">Sidra Trabanco</a></h3>
 						  <div class="d-flex">
 							  <div class="pricing">
-								  <p class="price"><span>3€ 70cl</span></p>
+								  <p class="price"><span>3â¬ 70cl</span></p>
 							  </div>
 						  </div>
 						  <div class="bottom-area d-flex px-3">
@@ -272,7 +269,7 @@
 						  <h3><a href="#">Licor de sidra dulce</a></h3>
 						  <div class="d-flex">
 							  <div class="pricing">
-								  <p class="price"><span>8€ 70cl</span></p>
+								  <p class="price"><span>8â¬ 70cl</span></p>
 							  </div>
 						  </div>
 						  <div class="bottom-area d-flex px-3">
@@ -301,7 +298,7 @@
 					  <h3><a href="#">Sidra DOP</a></h3>
 					  <div class="d-flex">
 						  <div class="pricing">
-							  <p class="price"><span>4.20€ 70cl</span></p>
+							  <p class="price"><span>4.20â¬ 70cl</span></p>
 						  </div>
 					  </div>
 					  <div class="bottom-area d-flex px-3">
@@ -349,9 +346,9 @@
 						<div class="card py-4 h-100">
 							<div class="card-body text-center">
 								<i class="fas fa-map-marked-alt text-primary mb-2"></i>
-								<h4 class="text-uppercase m-0">Dirección</h4>
+								<h4 class="text-uppercase m-0">DirecciÃ³n</h4>
 								<hr class="my-4">
-								<div class="small text-black-50">Calle Avenida de Oviedo, nº55, bajo 6</div>
+								<div class="small text-black-50">Calle Avenida de Oviedo, nÂº55, bajo 6</div>
 							</div>
 						</div>
 					</div>
@@ -373,7 +370,7 @@
 						<div class="card py-4 h-100">
 							<div class="card-body text-center">
 								<i class="fas fa-mobile-alt text-primary mb-2"></i>
-								<h4 class="text-uppercase m-0">Teléfono</h4>
+								<h4 class="text-uppercase m-0">TelÃ©fono</h4>
 								<hr class="my-4">
 								<div class="small text-black-50">985678598</div>
 							</div>
@@ -454,6 +451,9 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>  
+    
     
   </body>
 </html>
