@@ -20,23 +20,23 @@
 
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/animate.css"/>
     
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/owl.carousel.min.css'"/>
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/owl.theme.default.min.css'"/>
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/magnific-popup.css"/>
+    <link type="text/css" href="${pageContext.request.contextPath}/css/owl.carousel.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/owl.theme.default.min.css">
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/magnific-popup.css">
 
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/aos.css">
 
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/ionicons.min.css"/>
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/ionicons.min.css">
 
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/bootstrap-datepicker.css"/>
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/jquery.timepicker.css"/>
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/bootstrap-datepicker.css">
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/jquery.timepicker.css">
 
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/flaticon.css"/>
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/icomoon.css"/>
-	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/flaticon.css">
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/icomoon.css">
+	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/style.css">
 	
 <!-- Bootstrap core CSS -->
-	<link type="text/css" href="${pageContext.request.contextPath}/static/css/bootstrap.min.css" rel="stylesheet">
+	<link type="text/css" href="${pageContext.request.contextPath}/css/bootstrap.min.css" rel="stylesheet">
 
 <!-- Custom fonts for this template -->
 	<link href="../img/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
@@ -72,7 +72,7 @@
 		<div class="container">
 		  <div class="row no-gutters slider-text align-items-center justify-content-center">
 			<div class="col-md-9 ftco-animate text-center">
-					<p class="breadcrumbs"><span class="mr-2">Inicio</span> <span>Productos</span></p>			  <h1 class="mb-0 bread">Postres</h1>
+					<p class="breadcrumbs"><span class="mr-2">Inicio</span> <span>Productos</span></p> <h1 class="mb-0 bread">Postres</h1>
 			</div>
 		  </div>
 		</div>
@@ -129,7 +129,7 @@
 							  <h3><a href="#">Leche Frita</a></h3>
 							  <div class="d-flex">
 								  <div class="pricing">
-									  <p class="price"><span>10â¬/Unidad</span></p>
+									  <p class="price"><span>10 euros/Unidad</span></p>
 								  </div>
 							  </div>
 							  <div class="bottom-area d-flex px-3">
@@ -157,7 +157,7 @@
 							  <h3><a href="#">Frixuelos</a></h3>
 							  <div class="d-flex">
 								  <div class="pricing">
-									  <p class="price"><span>7,50â¬/Unidad</span></p>
+									  <p class="price"><span>7,50 euros/Unidad</span></p>
 								  </div>
 							  </div>
 							  <div class="bottom-area d-flex px-3">
@@ -186,7 +186,7 @@
 							  <h3><a href="#">Casadielles</a></h3>
 							  <div class="d-flex">
 								  <div class="pricing">
-									  <p class="price"><span>9â¬/Unidad</span></p>
+									  <p class="price"><span>9 euros /Unidad</span></p>
 								  </div>
 							  </div>
 							  <div class="bottom-area d-flex px-3">
@@ -215,7 +215,7 @@
 							  <h3><a href="#">Torrijas</a></h3>
 							  <div class="d-flex">
 								  <div class="pricing">
-									  <p class="price"><span>6â¬/Unidad </span></p>
+									  <p class="price"><span>6 euros/Unidad </span></p>
 								  </div>
 							  </div>
 							  <div class="bottom-area d-flex px-3">
@@ -244,7 +244,7 @@
 							  <h3><a href="#">Borrachinos</a></h3>
 							  <div class="d-flex">
 								  <div class="pricing">
-									  <p class="price"><span>5,50â¬/Unidad</span></p>
+									  <p class="price"><span>5,50 euros/Unidad</span></p>
 								  </div>
 							  </div>
 							  <div class="bottom-area d-flex px-3">
@@ -273,7 +273,7 @@
 							  <h3><a href="#">Buñuelos de calabaza</a></h3>
 							  <div class="d-flex">
 								  <div class="pricing">
-									  <p class="price"><span>4,50€/Unidad</span></p>
+									  <p class="price"><span>4,50 euros/Unidad</span></p>
 								  </div>
 							  </div>
 							  <div class="bottom-area d-flex px-3">
@@ -302,7 +302,7 @@
 							  <h3><a href="#">Manzana asada</a></h3>
 							  <div class="d-flex">
 								  <div class="pricing">
-									  <p class="price"><span>8â¬/Unidad</span></p>
+									  <p class="price"><span>8 euros/Unidad</span></p>
 								  </div>
 							  </div>
 							  <div class="bottom-area d-flex px-3">
@@ -376,7 +376,7 @@
 						<div class="card py-4 h-100">
 							<div class="card-body text-center">
 								<i class="fas fa-mobile-alt text-primary mb-2"></i>
-								<h4 class="text-uppercase m-0">TelÃ©fono</h4>
+								<h4 class="text-uppercase m-0">Telefono</h4>
 								<hr class="my-4">
 								<div class="small text-black-50">985678598</div>
 							</div>
@@ -409,14 +409,14 @@
 
   <!----------------------------------------------------SCRIPTS------------------------------------------------------------------>		
 		<!-- Bootstrap core JavaScript -->
-		<script src="vendor/jquery/jquery.min.js"></script>
-		<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+		<script src="${pageContext.request.contextPath}/js/jquery.min.js"></script>
+		<script src="${pageContext.request.contextPath}/js/bootstrap.bundle.min.js"></script>
 	
 		<!-- Plugin JavaScript -->
-		<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+		<script src="${pageContext.request.contextPath}/js/jquery.easing.min.js"></script>
 	
 		<!-- Custom scripts for this template -->
-		<script src="js/grayscale.min.js"></script>
+		<script src="${pageContext.request.contextPath}/js/grayscale.min.js"></script>
 
 
 

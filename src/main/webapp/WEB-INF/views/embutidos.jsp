@@ -99,7 +99,7 @@
 							  <h3><a href="#">Chorizo</a></h3>
 							  <div class="d-flex">
 								  <div class="pricing">
-									  <p class="price"><span class="mr-2 price-dc">6€/kg</span><span class="price-sale">5€/kg</span></p>
+									  <p class="price"><span class="mr-2 price-dc">6euros/kg</span><span class="price-sale">5euros/kg</span></p>
 								  </div>
 							  </div>
 							  <div class="bottom-area d-flex px-3">
@@ -128,7 +128,7 @@
 							  <h3><a href="#">Chosco</a></h3>
 							  <div class="d-flex">
 								  <div class="pricing">
-									  <p class="price"><span>10,20€/kg</span></p>
+									  <p class="price"><span>10,20euros/kg</span></p>
 								  </div>
 							  </div>
 							  <div class="bottom-area d-flex px-3">
@@ -157,7 +157,7 @@
 							  <h3><a href="#">Morcilla</a></h3>
 							  <div class="d-flex">
 								  <div class="pricing">
-									  <p class="price"><span>5,70€/kg</span></p>
+									  <p class="price"><span>5,70euros/kg</span></p>
 								  </div>
 							  </div>
 							  <div class="bottom-area d-flex px-3">
@@ -186,7 +186,7 @@
 							  <h3><a href="#">Chorizo de jabali</a></h3>
 							  <div class="d-flex">
 								  <div class="pricing">
-									  <p class="price"><span>5,90€/kg</span></p>
+									  <p class="price"><span>5,90euros/kg</span></p>
 								  </div>
 							  </div>
 							  <div class="bottom-area d-flex px-3">
@@ -214,7 +214,7 @@
 						  <h3><a href="#">Lacon</a></h3>
 						  <div class="d-flex">
 							  <div class="pricing">
-								  <p class="price"><span>10€/kg</span></p>
+								  <p class="price"><span>10euros/kg</span></p>
 							  </div>
 						  </div>
 						  <div class="bottom-area d-flex px-3">
@@ -242,7 +242,7 @@
 						  <h3><a href="#">Cecina</a></h3>
 						  <div class="d-flex">
 							  <div class="pricing">
-								  <p class="price"><span>13,10€/kg</span></p>
+								  <p class="price"><span>13,10euros/kg</span></p>
 							  </div>
 						  </div>
 						  <div class="bottom-area d-flex px-3">
@@ -271,7 +271,7 @@
 						  <h3><a href="#">Longaniza</a></h3>
 						  <div class="d-flex">
 							  <div class="pricing">
-								  <p class="price"><span>9,70€/kg</span></p>
+								  <p class="price"><span>9,70euros/kg</span></p>
 							  </div>
 						  </div>
 						  <div class="bottom-area d-flex px-3">
@@ -300,7 +300,7 @@
 					  <h3><a href="#">Picadillo</a></h3>
 					  <div class="d-flex">
 						  <div class="pricing">
-							  <p class="price"><span>3,50€/kg</span></p>
+							  <p class="price"><span>3,50euros/kg</span></p>
 						  </div>
 					  </div>
 					  <div class="bottom-area d-flex px-3">

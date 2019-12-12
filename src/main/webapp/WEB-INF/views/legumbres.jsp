@@ -102,7 +102,7 @@
 									  <h3><a href="#">Fabas de la Granja</a></h3>
 									  <div class="d-flex">
 										  <div class="pricing">
-											  <p class="price"><span class="mr-2 price-dc">14â¬/kg</span><span class="price-sale">11â¬/kg</span></p>
+											  <p class="price"><span class="mr-2 price-dc">14 euros/kg</span><span class="price-sale">11 euros/kg</span></p>
 										  </div>
 									  </div>
 									  <div class="bottom-area d-flex px-3">
@@ -131,7 +131,7 @@
 									  <h3><a href="#">Garbanzos</a></h3>
 									  <div class="d-flex">
 										  <div class="pricing">
-											  <p class="price"><span>5,20â¬/kg</span></p>
+											  <p class="price"><span>5,20 euros/kg</span></p>
 										  </div>
 									  </div>
 									  <div class="bottom-area d-flex px-3">
@@ -160,7 +160,7 @@
 									  <h3><a href="#">Lentejas</a></h3>
 									  <div class="d-flex">
 										  <div class="pricing">
-											  <p class="price"><span>3,20â¬/kg</span></p>
+											  <p class="price"><span>3,20 euros/kg</span></p>
 										  </div>
 									  </div>
 									  <div class="bottom-area d-flex px-3">
@@ -189,7 +189,7 @@
 									  <h3><a href="#">Alubias pintas</a></h3>
 									  <div class="d-flex">
 										  <div class="pricing">
-											  <p class="price"><span>5,20â¬/kg</span></p>
+											  <p class="price"><span>5,20 euros/kg</span></p>
 										  </div>
 									  </div>
 									  <div class="bottom-area d-flex px-3">
@@ -242,10 +242,10 @@
 								  " onmouseover="this.src='img/Legumbres/cuchara-judion.jpg';" src="img/Legumbres/bol-judion.jpg" />
 							  </a>
 							  <div class="text py-3 pb-4 px-3 text-center">
-								  <h3><a href="#">JudiÃ³n</a></h3>
+								  <h3><a href="#">Judías</a></h3>
 								  <div class="d-flex">
 									  <div class="pricing">
-										  <p class="price"><span>3,20â¬/kg</span></p>
+										  <p class="price"><span>3,20 euros/kg</span></p>
 									  </div>
 								  </div>
 								  <div class="bottom-area d-flex px-3">
@@ -274,7 +274,7 @@
 								  <h3><a href="#">Guisantes</a></h3>
 								  <div class="d-flex">
 									  <div class="pricing">
-										  <p class="price"><span>2,20â¬/kg</span></p>
+										  <p class="price"><span>2,20 euros/kg</span></p>
 									  </div>
 								  </div>
 								  <div class="bottom-area d-flex px-3">
@@ -303,7 +303,7 @@
 							  <h3><a href="#">Soja</a></h3>
 							  <div class="d-flex">
 								  <div class="pricing">
-									  <p class="price"><span>5,20â¬/kg</span></p>
+									  <p class="price"><span>5,20 euros/kg</span></p>
 								  </div>
 							  </div>
 							  <div class="bottom-area d-flex px-3">
@@ -355,7 +355,7 @@
 						<div class="card py-4 h-100">
 							<div class="card-body text-center">
 								<i class="fas fa-map-marked-alt text-primary mb-2"></i>
-								<h4 class="text-uppercase m-0">DirecciÃ³n</h4>
+								<h4 class="text-uppercase m-0">Direccion</h4>
 								<hr class="my-4">
 								<div class="small text-black-50">Calle Avenida de Oviedo, n º55, bajo 6</div>
 							</div>
@@ -379,7 +379,7 @@
 						<div class="card py-4 h-100">
 							<div class="card-body text-center">
 								<i class="fas fa-mobile-alt text-primary mb-2"></i>
-								<h4 class="text-uppercase m-0">TelÃ©fono</h4>
+								<h4 class="text-uppercase m-0">Telefono</h4>
 								<hr class="my-4">
 								<div class="small text-black-50">985678598</div>
 							</div>

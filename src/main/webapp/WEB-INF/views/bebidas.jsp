@@ -100,7 +100,7 @@
 							  <h3><a href="#">Vino blanco</a></h3>
 							  <div class="d-flex">
 								  <div class="pricing">
-									  <p class="price"><span class="price-sale">8€ 70cl</span></p>
+									  <p class="price"><span class="price-sale">8euros 70cl</span></p>
 								  </div>
 							  </div>
 							  <div class="bottom-area d-flex px-3">
@@ -129,7 +129,7 @@
 							  <h3><a href="#">Vino tinto</a></h3>
 							  <div class="d-flex">
 								  <div class="pricing">
-									  <p class="price"><span>8€ 70cl</span></p>
+									  <p class="price"><span>8euros 70cl</span></p>
 								  </div>
 							  </div>
 							  <div class="bottom-area d-flex px-3">
@@ -158,7 +158,7 @@
 							  <h3><a href="#">Orujo de hierbas</a></h3>
 							  <div class="d-flex">
 								  <div class="pricing">
-									  <p class="price"><span>11€ 70cl</span></p>
+									  <p class="price"><span>11euros 70cl</span></p>
 								  </div>
 							  </div>
 							  <div class="bottom-area d-flex px-3">
@@ -187,7 +187,7 @@
 							  <h3><a href="#">Orujo de miel</a></h3>
 							  <div class="d-flex">
 								  <div class="pricing">
-									  <p class="price"><span>11€ 70cl</span></p>
+									  <p class="price"><span>11euros 70cl</span></p>
 								  </div>
 							  </div>
 							  <div class="bottom-area d-flex px-3">
@@ -215,7 +215,7 @@
 						  <h3><a href="#">Licor de arándanos</a></h3>
 						  <div class="d-flex">
 							  <div class="pricing">
-								  <p class="price"><span>9€ 70cl</span></p>
+								  <p class="price"><span>9euros 70cl</span></p>
 							  </div>
 						  </div>
 						  <div class="bottom-area d-flex px-3">
@@ -243,7 +243,7 @@
 						  <h3><a href="#">Sidra Trabanco</a></h3>
 						  <div class="d-flex">
 							  <div class="pricing">
-								  <p class="price"><span>3€ 70cl</span></p>
+								  <p class="price"><span>3euros 70cl</span></p>
 							  </div>
 						  </div>
 						  <div class="bottom-area d-flex px-3">
@@ -272,7 +272,7 @@
 						  <h3><a href="#">Licor de sidra dulce</a></h3>
 						  <div class="d-flex">
 							  <div class="pricing">
-								  <p class="price"><span>8€ 70cl</span></p>
+								  <p class="price"><span>8euros 70cl</span></p>
 							  </div>
 						  </div>
 						  <div class="bottom-area d-flex px-3">
@@ -301,7 +301,7 @@
 					  <h3><a href="#">Sidra DOP</a></h3>
 					  <div class="d-flex">
 						  <div class="pricing">
-							  <p class="price"><span>4.20€ 70cl</span></p>
+							  <p class="price"><span>4.20euros 70cl</span></p>
 						  </div>
 					  </div>
 					  <div class="bottom-area d-flex px-3">

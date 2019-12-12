@@ -377,7 +377,7 @@
 						<div class="card py-4 h-100">
 							<div class="card-body text-center">
 								<i class="fas fa-map-marked-alt text-primary mb-2"></i>
-								<h4 class="text-uppercase m-0">DirecciÃ³n</h4>
+								<h4 class="text-uppercase m-0">Direccion</h4>
 								<hr class="my-4">
 								<div class="small text-black-50">Calle Avenida de Oviedo, n º55, bajo 6</div>
 							</div>
@@ -401,7 +401,7 @@
 						<div class="card py-4 h-100">
 							<div class="card-body text-center">
 								<i class="fas fa-mobile-alt text-primary mb-2"></i>
-								<h4 class="text-uppercase m-0">TelÃ©fono</h4>
+								<h4 class="text-uppercase m-0">Telefono</h4>
 								<hr class="my-4">
 								<div class="small text-black-50">985678598</div>
 							</div>
