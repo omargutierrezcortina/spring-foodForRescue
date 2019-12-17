@@ -2,7 +2,7 @@ package com.foodForRescue.spring.util;
 
 import javax.servlet.http.HttpSession;
 
-import com.foodForRescue.spring.model.Usuario;
+import foodForRescue.model.Usuario;
 
 public class UserUtil {
 	

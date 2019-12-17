@@ -1,4 +1,4 @@
-package com.foodForRescue.spring.model;
+package foodForRescue.model;
 
 /**
  * Entity implementation class for Entity: Categorias

@@ -1,4 +1,4 @@
-package com.foodForRescue.spring.repository;
+package foodForRescue.repository;
 
 import java.util.List;
 
@@ -7,7 +7,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
-import com.foodForRescue.spring.model.Reciclaje;
+import foodForRescue.model.Reciclaje;
 
 @Repository
 public interface ReciclajeRepository extends JpaRepository<Reciclaje, Long>{ 
