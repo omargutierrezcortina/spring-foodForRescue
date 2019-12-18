@@ -1,4 +1,4 @@
-package com.foodForRescue.spring.model;
+package foodForRescue.model;
 
 import java.io.Serializable;
 import java.util.ArrayList;

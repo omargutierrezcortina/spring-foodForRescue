@@ -7,12 +7,12 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import com.foodForRescue.spring.model.Producto;
-import com.foodForRescue.spring.model.Reciclaje;
-import com.foodForRescue.spring.model.Usuario;
-import com.foodForRescue.spring.repository.ProductoRepository;
-import com.foodForRescue.spring.repository.ReciclajeRepository;
-import com.foodForRescue.spring.repository.UsuarioRepository;
+import foodForRescue.model.Producto;
+import foodForRescue.model.Reciclaje;
+import foodForRescue.model.Usuario;
+import foodForRescue.repository.ProductoRepository;
+import foodForRescue.repository.ReciclajeRepository;
+import foodForRescue.repository.UsuarioRepository;
 
 
 

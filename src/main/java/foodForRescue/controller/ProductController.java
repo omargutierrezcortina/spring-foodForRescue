@@ -1,4 +1,4 @@
-package com.foodForRescue.spring.controller;
+package foodForRescue.controller;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,15 +16,16 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.foodForRescue.spring.model.Categoria;
-import com.foodForRescue.spring.model.Compra;
-import com.foodForRescue.spring.model.Producto;
-import com.foodForRescue.spring.model.Reciclaje;
-import com.foodForRescue.spring.model.TiposCategoria;
-import com.foodForRescue.spring.model.Usuario;
-import com.foodForRescue.spring.repository.ProductoRepository;
-import com.foodForRescue.spring.repository.ReciclajeRepository;
 import com.foodForRescue.spring.util.UserUtil;
+
+import foodForRescue.model.Categoria;
+import foodForRescue.model.Compra;
+import foodForRescue.model.Producto;
+import foodForRescue.model.Reciclaje;
+import foodForRescue.model.TiposCategoria;
+import foodForRescue.model.Usuario;
+import foodForRescue.repository.ProductoRepository;
+import foodForRescue.repository.ReciclajeRepository;
 
 @Controller
 public class ProductController {

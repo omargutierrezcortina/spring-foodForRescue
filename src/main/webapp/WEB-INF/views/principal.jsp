@@ -49,7 +49,7 @@
             <div class="mx-auto text-center">
                 <h1 class="mx-auto my-0 text-uppercase">FOOD FOR RESCUE</h1>
                 <h2 class="text-white-50 mx-auto mt-2 mb-5">Una nueva perspectiva medioambiental al alcance de un click</h2>
-                <a href="/bebidas" class="btn btn-primary js-scroll-trigger">COMIENZA TU COMPRA</a>
+                <a href="/categoria/1" class="btn btn-primary js-scroll-trigger">COMIENZA TU COMPRA</a>
             </div>
         </div>
     </header>
@@ -136,17 +136,45 @@
                     <img class="img-fluid" src="img/pueblos-marineros-de-asturias-m.jpg" alt="">
                 </div>
 
-                <div class="col-lg-6">
+                  <div class="col-lg-6">
                     <div class="">
                         <div class="d-flex h-100">
                             <div class="project-text w-100 my-auto text-center text-lg-left">
-                                <h4 class="text-black">Misty</h4>
-                                <p class="mb-0 text-black-50">An example of where you can put an image of a project, or anything else, along with a description.</p>
-                               
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                                <br><br>
+                                <h4 text-align="left" class="text-black">Denominación de
+								origen</h4>
+							<p  text-align="left"class="mb-0 text-black-50">La denominación de origen
+								protegida (D. O. P.) es un tipo de protección dentro del ámbito
+								de la propiedad industrial basado en la indicación de
+								procedencia, aplicada a un producto alimenticio (generalmente de
+								origen agrícola). Bajo esta modalidad de protección, se asume
+								que la calidad y características de un producto se deben,
+								fundamental y exclusivamente al medio geográfico en el que se
+								produce, transforma, elabora y/o envasa, aunque esto no siempre
+								sea así. Lo distingue y protege de aquellos productos
+								alimenticios idénticos o similares que se producen en otras
+								regiones del mundo, y que pudieran reemplazar algunas etapas del
+								proceso de elaboración original, por técnicas de
+								industrialización, para su consumo en forma masiva, o cambian
+								una de las materias primas por otra de similares
+								características. La ventaja fundamental de esta calificación, es
+								garantizar al consumidor, no solo un nivel de calidad más o
+								menos constante, sinó también mantener características
+								específicas irrepetibles que no posee un producto similar
+								producido en otra región o con otra materia prima. A cambio de
+								esto, los productores obtienen una protección legal contra la
+								producción o elaboración de tales productos en otras zonas,
+								aunque se utilicen los mismos ingredientes y procedimientos, y
+								que les permite influir sobre el precio final de éstos
+								abaratando los costos. Todos nuestros
+								productos son elaborados en Asturias por personas que han
+								trasladado sus experiencias y negocios familiares a nuevas
+								generaciones y que abogan por mantener la extraordinaria
+								referencia asturiana en cualquier lugar del mundo.</p>
+								</div>
+							</div>
+						</div>
+					</div>
             </div>
 
            

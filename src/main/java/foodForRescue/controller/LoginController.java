@@ -1,4 +1,4 @@
-package com.foodForRescue.spring.controller;
+package foodForRescue.controller;
 
 import java.io.IOException;
 import java.util.List;
@@ -17,10 +17,11 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.foodForRescue.spring.model.Producto;
-import com.foodForRescue.spring.model.Usuario;
-import com.foodForRescue.spring.repository.UsuarioRepository;
 import com.foodForRescue.spring.util.SecurityUtil;
+
+import foodForRescue.model.Producto;
+import foodForRescue.model.Usuario;
+import foodForRescue.repository.UsuarioRepository;
 
 @Controller
 public class LoginController {

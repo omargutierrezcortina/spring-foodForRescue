@@ -1,82 +1,51 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-    
-     <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>  
-    
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<!-- Mobile Specific Metas -->
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	
-	<!-- Main Style Css -->
-	<link rel="stylesheet" href="css/csslogin.css"/>
-	
+<meta charset="UTF-8">
+<title>Login</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/mycss.css">
 
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
-
-<title>FFRLogin</title>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 </head>
+
 <body>
 
-<header class="masthead">
-	<div class ="container">
-		<h1>Food For Rescue</h1>
-		<hr/>
-		<p>${aviso}</p>
-		
-		
-		<div class="d-flex justify-content-center h-100">
-		<div class="card">
-			<div class="card-header">
-				<h3>Inicio de Sesión</h3>
-			</div>
+<style type="text/css">
 
-		<div class="form-v8-content">
-		<div class="form-right">
-				<span onclick="document.getElementById('id01').style.display='none'" 
-				class="w3-button w3-display-topright">&times;</span>
-			
+	body {
+	background-image: urL(/img/cova.jpg);
+	}
 	
-			    <form:form action = "${pageContext.request.contextPath}/login" method="POST" modelAttribute="usuario">	
-					<div class="form-row">
-<!-- 					<label for="email"class="form-row-inner">Email</label> -->
-					  <form:input type ="email" path="email" class = "form-control"/> 
-					  		<span class="label">E-Mail</span>
-							  <span class="border"></span>
-							  
-					</div>
-					<div class="form-row">
-						<label class="form-row-inner">
-							<input type="password" name="password" id="password" class="input-text" required>
-							<span class="label">Contraseña</span>
-							<span class="border"></span>
-						</label>
-					</div>
-  					<div class="tab">
-						<div class="tab-inner">
-  						<button class = "btn btn-primary" type = "submit" >Acceder</button>
-  						</div>
-					</div>
-				</form:form>
-			</div>
-		</div>
-		</div>
-		</div>
-		</div>
-		</header>	
-		
-					
-		
-
 	
+</style>
+<header>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<div align="left">
+<img src="/img/logo.final.png" />
+</div>
+	</header>
+<br>
+<h2>INICIAR SESION</h2>
+
+<form action="${pageContext.request.contextPath}/login" method="POST">
+
+  <div class="container">
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Username" name="email" required>
+
+    <label for="password"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="password" required>
+        
+    <button type="submit">Login</button>
+    
+  
+  </div>
+
+</form>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </body>
 </html>
-

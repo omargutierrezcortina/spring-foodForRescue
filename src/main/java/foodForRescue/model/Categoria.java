@@ -1,4 +1,4 @@
-package com.foodForRescue.spring.model;
+package foodForRescue.model;
 
 import java.util.ArrayList;
 import java.util.List;
